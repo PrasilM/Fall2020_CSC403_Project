@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 #pragma warning disable 1591 // use this to disable comment warnings
 
-namespace Fall2020_CSC403_Project.code {
+namespace Fall2020_CSC403_Project.code
+{
   public class BattleCharacter : Character {
     public int Health { get; private set; }
+    public int Armor { get; private set; }
     public int MaxHealth { get; private set; }
     private float strength;
 
@@ -142,6 +144,8 @@ namespace Fall2020_CSC403_Project.code {
       MaxHealth = 20;
       strength = 2;
       Health = MaxHealth;
+            //added armor so the palyer feels a little safer, what a baby!!!!!
+      Armor = 10;
     }
 
     public void OnAttack(int amount) {
@@ -150,6 +154,15 @@ namespace Fall2020_CSC403_Project.code {
 
     public void AlterHealth(int amount) {
       Health += amount;
+    }
+        /// <summary>
+        /// When there is an armor pick up, the amount will be added on just like another health bar that will depleate
+        /// before getting to health
+        /// </summary>
+        /// <param name="amount"></param>
+        public void AdditionalArmor(int amount)
+    {
+            Armor += amount;
     }
   }
 }
