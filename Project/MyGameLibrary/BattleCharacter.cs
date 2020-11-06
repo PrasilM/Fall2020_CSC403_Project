@@ -12,8 +12,132 @@ namespace Fall2020_CSC403_Project.code {
     public int MaxHealth { get; private set; }
     private float strength;
 
+    // Adding new combat type for enemies/player
+    public String elementalType {get; set;}
+
     public event Action<int> AttackEvent;
 
+    public double elementalBattleCalculation(String et1, String et2)
+    {
+
+      if(et1 == "normal")
+      {
+        return 1;
+      }
+
+      else if(et1 == "fire")
+      {
+        if(et2 == "fire")
+        {
+          return 1;
+        }
+
+        else if(et2 == "water")
+        {
+          return 0.5;
+        }
+
+        else if(et2 == "Earth")
+        {
+          return 1.5;
+        }
+
+        else if(et2 == "posion")
+        {
+          return 1;
+        }
+
+        else
+        {
+          return 1;
+        }
+      }
+
+      else if (et1 == "water")
+      {
+        if(et2 == "fire")
+        {
+          return 0.5;
+        }
+
+        else if(et2 == "water")
+        {
+          return 1;
+        }
+
+        else if(et2 == "Earth")
+        {
+          return 1;
+        }
+
+        else if(et2 == "posion")
+        {
+          return 1.5;
+        }
+
+        else
+        {
+          return 1;
+        }
+      }
+
+      else if(et1 == "Earth")
+      {
+        if(et2 == "fire")
+        {
+          return 1.5;
+        }
+
+        else if(et2 == "water")
+        {
+          return 0.5;
+        }
+
+        else if(et2 == "Earth")
+        {
+          return 1;
+        }
+
+        else if(et2 == "posion")
+        {
+          return 1;
+        }
+
+        else
+        {
+          return 1;
+        }
+      }
+
+      else
+      {
+        if(et2 == "fire")
+        {
+          return 1.5;
+        }
+
+        else if(et2 == "water")
+        {
+          return 1.5;
+        }
+
+        else if(et2 == "Earth")
+        {
+          return 1.5;
+        }
+
+        else if(et2 == "posion")
+        {
+          return 1;
+        }
+
+        else
+        {
+          return 0.5;
+        }
+      }
+
+    }
     public BattleCharacter(Vector2 initPos, Collider collider) : base(initPos, collider) {
       MaxHealth = 20;
       strength = 2;
