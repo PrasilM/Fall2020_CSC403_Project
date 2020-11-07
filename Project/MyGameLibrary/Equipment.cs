@@ -17,6 +17,7 @@ namespace Fall2020_CSC403_Project.code
             ///ID 002: Wand, strength= 3
             ///ID 003: Cloak, armor=3
             ///ID 004: CursedRing, strength= 5, armor=-1
+            ///ID 005: Flipflops, strength= 100
 
             switch (equipmentID)
             {
@@ -35,6 +36,10 @@ namespace Fall2020_CSC403_Project.code
                 case 004:
                     strength = 5;
                     armor = -1;
+                    break;
+                case 005:
+                    strength = 100;
+                    armor = 0;
                     break;
 
                 default:
