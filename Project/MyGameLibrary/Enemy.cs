@@ -25,6 +25,6 @@ namespace Fall2020_CSC403_Project.code {
         /// <summary>
         /// Prasil: This is where i will be working on enemy level up
         /// </summary>
-        public EnemyLevelUp{}
-  }
+       // public EnemyLevelUp{}
+}
 }

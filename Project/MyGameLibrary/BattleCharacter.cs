@@ -12,6 +12,7 @@ namespace Fall2020_CSC403_Project.code
     public int Health { get; private set; }
     public int Armor { get; private set; }
     public int MaxHealth { get; private set; }
+    public int MaxArmor { get; private set; }
     private float strength;
 
     // Adding new combat type for enemies/player
@@ -142,10 +143,11 @@ namespace Fall2020_CSC403_Project.code
     }
     public BattleCharacter(Vector2 initPos, Collider collider) : base(initPos, collider) {
       MaxHealth = 20;
+      MaxArmor = 20;
       strength = 2;
       Health = MaxHealth;
             //added armor so the palyer feels a little safer, what a baby!!!!!
-      Armor = 10;
+      Armor = 0;
     }
 
     public void OnAttack(int amount) {
