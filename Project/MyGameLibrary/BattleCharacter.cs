@@ -20,6 +20,8 @@ namespace Fall2020_CSC403_Project.code
 
     public event Action<int> AttackEvent;
 
+    public event Action<int> HealEvent;
+
     public double elementalBattleCalculation(String et1, String et2)
     {
 
@@ -152,6 +154,11 @@ namespace Fall2020_CSC403_Project.code
 
     public void OnAttack(int amount) {
       AttackEvent((int)(amount * strength));
+    }
+
+    public void duringHeal(int amount)
+    {
+      HealEvent((int)(amount));
     }
 
     public void AlterHealth(int amount) {
