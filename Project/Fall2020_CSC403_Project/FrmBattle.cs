@@ -26,6 +26,7 @@ namespace Fall2020_CSC403_Project {
       // Observer pattern
       enemy.AttackEvent += PlayerDamage;
       player.AttackEvent += EnemyDamage;
+      player.HealEvent += PlayerHealing;
 
       // show health
       UpdateHealthBars();
@@ -72,9 +73,10 @@ namespace Fall2020_CSC403_Project {
        lblPlayerArmorFull.Text = player.Armor.ToString();
     }
 
-        private void btnAttack_Click(object sender, EventArgs e) {
+    private void btnAttack_Click(object sender, EventArgs e) {
       player.OnAttack(-4);
-      if (enemy.Health > 0) {
+      if (enemy.Health > 0) 
+      {
         enemy.OnAttack(-2);
       }
 
@@ -85,11 +87,27 @@ namespace Fall2020_CSC403_Project {
       }
     }
 
+    // heal function
+    private void heal_click(object sender, EventArgs e)
+    {
+      if(player.Health < player.MaxHealth)
+      {
+        player.duringHeal(5);
+      }
+
+      UpdateHealthBars();
+    }
+
     private void EnemyDamage(int amount) {
       enemy.AlterHealth(amount);
     }
 
     private void PlayerDamage(int amount) {
+      player.AlterHealth(amount);
+    }
+
+    private void PlayerHealing(int amount)
+    {
       player.AlterHealth(amount);
     }
 
