@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Fall2020_CSC403_Project.code {
-  public class NPC : Character {
-    public NPC(Vector2 initPos, Collider collider) : base(initPos, collider) {
-
-           
-            ///Prasil: trying to figure out how this works and see how commit works
-
+  public class NPC : Character
+  {
+        public Image Img { get; set; }
+        public NPC(Vector2 initPos, Collider collider) : base(initPos, collider) {
     }
   }
 }

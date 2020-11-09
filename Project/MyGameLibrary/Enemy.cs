@@ -25,6 +25,14 @@ namespace Fall2020_CSC403_Project.code {
         /// <summary>
         /// Prasil: This is where i will be working on enemy level up
         /// </summary>
-       // public EnemyLevelUp{}
-}
+
+        private void LevelUp()
+        {
+            /// pseudo code
+            /// enemyLevel = playerLevel+1
+            /// enemyHealth = playerHealth + 5
+            /// enemyStrength = playerStrength + 2
+            /// enemyArmor = playerArmor + 3
+        }
+    }
 }

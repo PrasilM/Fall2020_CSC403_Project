@@ -154,7 +154,8 @@ namespace Fall2020_CSC403_Project.code
       AttackEvent((int)(amount * strength));
     }
 
-    public void AlterHealth(int amount) {
+    public void AlterHealth(int amount)
+    {
       Health += amount;
     }
         /// <summary>
@@ -162,9 +163,9 @@ namespace Fall2020_CSC403_Project.code
         /// before getting to health
         /// </summary>
         /// <param name="amount"></param>
-        public void AdditionalArmor(int amount)
+  public void AdditionalArmor(int amount)
     {
-            Armor += amount;
+        Armor += amount;
     }
   }
 }
