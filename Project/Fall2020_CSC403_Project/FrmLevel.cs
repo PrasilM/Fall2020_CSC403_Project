@@ -3,6 +3,8 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
+
+
 namespace Fall2020_CSC403_Project {
   public partial class FrmLevel : Form {
     private Player player;
@@ -10,6 +12,9 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
+
+    private Boss finalBoss;
+
     private Character[] walls;
 
     private DateTime timeBegin;
@@ -112,6 +117,12 @@ namespace Fall2020_CSC403_Project {
 
       if (enemy == bossKoolaid) {
         frmBattle.SetupForBossBattle();
+      }
+
+      // setup for final boss
+      if(enemy == finalBoss)
+      {
+        //frmBattle
       }
     }
 

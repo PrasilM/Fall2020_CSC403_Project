@@ -156,17 +156,12 @@ namespace Fall2020_CSC403_Project.code
       AttackEvent((int)(amount * strength));
     }
 
-<<<<<<< HEAD
-    public void AlterHealth(int amount)
-    {
-=======
     public void duringHeal(int amount)
     {
       HealEvent((int)(amount));
     }
 
     public void AlterHealth(int amount) {
->>>>>>> 2e49aa74ad94ae78de57512440b49951df60a109
       Health += amount;
     }
         /// <summary>
