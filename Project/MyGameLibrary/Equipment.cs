@@ -11,7 +11,7 @@ namespace Fall2020_CSC403_Project.code
         public float strength;
         public float armor;
 
-        public Equipment(int equipmentID)
+        /*public Equipment(int equipmentID)
         {
             ///ID 001: Sword, strength= 2
             ///ID 002: Wand, strength= 3
@@ -46,6 +46,6 @@ namespace Fall2020_CSC403_Project.code
                     break;
             };
                
-        }
+        }*/
     }
 }

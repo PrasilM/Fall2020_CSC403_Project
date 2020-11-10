@@ -13,7 +13,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
 
-    private Boss finalBoss;
+    //private Boss finalBoss;
 
     private Character[] walls;
 
@@ -120,10 +120,10 @@ namespace Fall2020_CSC403_Project {
       }
 
       // setup for final boss
-      if(enemy == finalBoss)
+      /*if(enemy == finalBoss)
       {
         //frmBattle
-      }
+      }*/
     }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {

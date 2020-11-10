@@ -73,9 +73,9 @@ namespace Fall2020_CSC403_Project {
     {
        float playerArmorPer = player.Armor / (float)player.MaxArmor;
        const int MAX_ARMORBAR_WIDTH = 226;
-       lblPlayerArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
+       //lblPlayerArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
 
-       lblPlayerArmorFull.Text = player.Armor.ToString();
+       //lblPlayerArmorFull.Text = player.Armor.ToString();
     }
 
     private void btnAttack_Click(object sender, EventArgs e) {
@@ -97,7 +97,7 @@ namespace Fall2020_CSC403_Project {
     {
       if(player.Health < player.MaxHealth)
       {
-        player.duringHeal();
+        //player.duringHeal();
       }
 
       UpdateHealthBars();
