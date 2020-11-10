@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterSelect.Designer.cs">
+      <DependentUpon>CharacterSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBattle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CharacterSelect.resx">
+      <DependentUpon>CharacterSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBattle.resx">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </EmbeddedResource>

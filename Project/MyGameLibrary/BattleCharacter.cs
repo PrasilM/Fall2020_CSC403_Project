@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace Fall2020_CSC403_Project.code
 {
   public class BattleCharacter : Character {
-    public int Health { get; private set; }
+    public int Health { get; protected set; }
     public int Armor { get; private set; }
-    public int MaxHealth { get; private set; }
+    public int MaxHealth { get; protected set; }
     public int MaxArmor { get; private set; }
-    private float strength;
+    public float strength { get; protected set; }
 
     // Adding new combat type for enemies/player
     public String elementalType {get; set;}
@@ -156,6 +156,7 @@ namespace Fall2020_CSC403_Project.code
       AttackEvent((int)(amount * strength));
     }
 
+    // function to heal (either via button or item)
     public void duringHeal(int amount)
     {
       HealEvent((int)(amount));

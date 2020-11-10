@@ -43,11 +43,6 @@ namespace Fall2020_CSC403_Project {
       tmrFinalBattle.Enabled = true;
     }
 
-    public void finalBossBattle()
-    {
-      
-    }
-
     public static FrmBattle GetInstance(Enemy enemy) {
       if (instance == null) {
         instance = new FrmBattle();
@@ -120,5 +115,10 @@ namespace Fall2020_CSC403_Project {
       picBossBattle.Visible = false;
       tmrFinalBattle.Enabled = false;
     }
-  }
+
+        private void FrmBattle_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
