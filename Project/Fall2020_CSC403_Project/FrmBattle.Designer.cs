@@ -45,6 +45,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.enemyElementStat = new System.Windows.Forms.TextBox();
             this.Equipment = new System.Windows.Forms.Button();
+            this.Food = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
@@ -233,6 +234,17 @@
             this.Equipment.UseVisualStyleBackColor = true;
             this.Equipment.Click += new System.EventHandler(this.Equipment_Click);
             // 
+            // Food
+            // 
+            this.Food.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Food.Location = new System.Drawing.Point(403, 523);
+            this.Food.Name = "Food";
+            this.Food.Size = new System.Drawing.Size(97, 38);
+            this.Food.TabIndex = 15;
+            this.Food.Text = "Food";
+            this.Food.UseVisualStyleBackColor = true;
+            this.Food.Click += new System.EventHandler(this.Food_Click);
+            // 
             // FrmBattle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,6 +252,7 @@
             this.BackColor = System.Drawing.Color.Green;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1096, 742);
+            this.Controls.Add(this.Food);
             this.Controls.Add(this.Equipment);
             this.Controls.Add(this.enemyElementStat);
             this.Controls.Add(this.textBox2);
@@ -287,5 +300,6 @@
         private System.Windows.Forms.TextBox textBox2;
         public System.Windows.Forms.TextBox enemyElementStat;
         private System.Windows.Forms.Button Equipment;
+        private System.Windows.Forms.Button Food;
     }
 }

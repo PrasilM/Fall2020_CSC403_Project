@@ -13,13 +13,16 @@ namespace Fall2020_CSC403_Project
         private Enemy enemy;
         private Player player;
         private readonly FrmEquipment equipment;
+        private readonly FrmFood food;
 
         private FrmBattle()
         {
             InitializeComponent();
             player = Game.player;
-            equipment = new FrmEquipment();
+            equipment = new FrmEquipment(this);
+            food = new FrmFood(this);
         }
+
 
         public void Setup()
         {
@@ -76,6 +79,8 @@ namespace Fall2020_CSC403_Project
             lblPlayerHealthFull.Text = player.Health.ToString();
             lblEnemyHealthFull.Text = enemy.Health.ToString();
         }
+
+
 
         private void UpdateArmorBars()
         {
@@ -239,10 +244,28 @@ namespace Fall2020_CSC403_Project
         {
 
         }
-
+        //Equipment
         private void Equipment_Click(object sender, EventArgs e)
         {
             equipment.Show();
         }
+        //Food
+        private void Food_Click(object sender, EventArgs e)
+        {
+            if (player.Health < player.MaxHealth)
+            {
+                food.Show();
+                UpdateHealthBars();
+                
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("On max health already, cannot use food items!!");
+            }
+
+        }
+
+
     }
+    
 }

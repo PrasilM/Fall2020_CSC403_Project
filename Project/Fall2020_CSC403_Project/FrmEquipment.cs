@@ -15,11 +15,13 @@ namespace Fall2020_CSC403_Project
     {
         //public static FrmEquipment instance = null;
         public Player player;
+        public FrmBattle battle;
 
-        public FrmEquipment()
+        public FrmEquipment(FrmBattle battle)
         {
             InitializeComponent();
             this.player = Game.player;
+            this.battle = battle;
         }
 
         private void button1_Click(object sender, EventArgs e)
