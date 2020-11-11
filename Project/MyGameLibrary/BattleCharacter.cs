@@ -13,6 +13,10 @@ namespace Fall2020_CSC403_Project.code
     public int Armor { get; private set; }
     public int MaxHealth { get; protected set; }
     public int MaxArmor { get; private set; }
+
+    public int Level { get; private set; }
+
+    public int MaxLevel { get; protected set; }
     public float strength { get; protected set; }
 
     // Adding new combat type for enemies/player
@@ -21,6 +25,8 @@ namespace Fall2020_CSC403_Project.code
     public event Action<int> AttackEvent;
 
     public event Action<int> HealEvent;
+
+        public event Action<int> LevelEvent;
 
     public double elementalBattleCalculation(String et1, String et2)
     {
@@ -150,6 +156,8 @@ namespace Fall2020_CSC403_Project.code
       Health = MaxHealth;
             //added armor so the palyer feels a little safer, what a baby!!!!!
       Armor = 0;
+            MaxLevel = 10;
+            Level = 1;
     }
 
 
@@ -175,5 +183,10 @@ namespace Fall2020_CSC403_Project.code
     {
         Armor += amount;
     }
+
+    public void LevelUp(int amount)
+        {
+            LevelEvent((int)(amount));
+        }
   }
 }
