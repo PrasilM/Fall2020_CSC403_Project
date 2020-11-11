@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEquipment.Designer.cs">
+      <DependentUpon>FrmEquipment.cs</DependentUpon>
+    </Compile>
     <Compile Include="finalBoss.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEquipment.resx">
+      <DependentUpon>FrmEquipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="finalBoss.resx">
       <DependentUpon>finalBoss.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +159,12 @@
       <Project>{F1E60F80-1868-4FE5-991B-FDDCFAF9B16B}</Project>
       <Name>MyGameLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\cloak.png" />
+    <Content Include="data\flipflop.jpg" />
+    <Content Include="data\sword.jpg" />
+    <Content Include="data\wand.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

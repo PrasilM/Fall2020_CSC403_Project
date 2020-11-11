@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fall2020_CSC403_Project.code
 {
-    public struct Equipment
+    public class Equipment
     {
         public float strength;
         public float armor;

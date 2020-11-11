@@ -174,6 +174,12 @@ namespace Fall2020_CSC403_Project.code
     public void AlterHealth(int amount) {
       Health += amount;
     }
+    //Added to enable equipment
+    public void AdditionalStrength(int amount)
+        {
+            strength += amount;
+        }
+
         /// <summary>
         /// When there is an armor pick up, the amount will be added on just like another health bar that will depleate
         /// before getting to health

@@ -10,11 +10,12 @@ namespace Fall2020_CSC403_Project {
     public static FrmBattle instance = null;
     private Enemy enemy;
     private Player player;
+    private FrmEquipment equipment;
 
     private FrmBattle() {
       InitializeComponent();
       player = Game.player;
-           
+      equipment = new FrmEquipment();
     }
 
     public void Setup() {
@@ -145,6 +146,17 @@ namespace Fall2020_CSC403_Project {
         }
 
         private void picPlayer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Equipment
+        private void EquipmentButton(object sender, EventArgs e)
+        {
+            equipment.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
