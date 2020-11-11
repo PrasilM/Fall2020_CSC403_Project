@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Fall2020_CSC403_Project.code
 {
-    public class finalBoss: BattleCharacter
+    public class thefinalBoss: BattleCharacter
     {
-        public finalBoss(Vector2 initPos, Collider collider) : base(initPos, collider)
+        public thefinalBoss(Vector2 initPos, Collider collider) : base(initPos, collider)
         {
             //initilize boss paramaters
             this.MaxHealth = 100;

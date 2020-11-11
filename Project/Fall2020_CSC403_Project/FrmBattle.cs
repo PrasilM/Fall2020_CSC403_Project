@@ -14,6 +14,7 @@ namespace Fall2020_CSC403_Project {
     private FrmBattle() {
       InitializeComponent();
       player = Game.player;
+           
     }
 
     public void Setup() {
@@ -73,6 +74,8 @@ namespace Fall2020_CSC403_Project {
        //lblPlayerArmorFull.Text = player.Armor.ToString();
     }
 
+    
+
     private void btnAttack_Click(object sender, EventArgs e) {
       player.OnAttack(-4);
       if (enemy.Health > 0) 
@@ -87,16 +90,6 @@ namespace Fall2020_CSC403_Project {
       }
     }
 
-    // heal function
-    private void heal_click(object sender, EventArgs e)
-    {
-      if(player.Health < player.MaxHealth)
-      {
-        //player.duringHeal();
-      }
-
-      UpdateHealthBars();
-    }
 
     private void EnemyDamage(int amount) {
       enemy.AlterHealth(amount);
@@ -117,6 +110,41 @@ namespace Fall2020_CSC403_Project {
     }
 
         private void FrmBattle_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        // FLEE BUTTON
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var rand = new Random();
+            int value = rand.Next(4);
+            if (value == 1)
+            {
+                instance = null;
+                Close();
+            }
+
+            else
+            {
+
+            }
+
+        }
+
+        // HEAL
+
+        private void Heal_Click_1(object sender, EventArgs e)
+        {
+            if (player.Health < player.MaxHealth)
+            {
+                player.duringHeal(4);
+            }
+
+            UpdateHealthBars();
+        }
+
+        private void picPlayer_Click(object sender, EventArgs e)
         {
 
         }

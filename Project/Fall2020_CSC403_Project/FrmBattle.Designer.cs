@@ -29,10 +29,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblEnemyHealthFull = new System.Windows.Forms.Label();
+            this.tmrFinalBattle = new System.Windows.Forms.Timer(this.components);
             this.picBossBattle = new System.Windows.Forms.PictureBox();
             this.picEnemy = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
-            this.tmrFinalBattle = new System.Windows.Forms.Timer(this.components);
+            this.flee = new System.Windows.Forms.Button();
+            this.Heal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
@@ -41,7 +43,7 @@
             // btnAttack
             // 
             this.btnAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttack.Location = new System.Drawing.Point(169, 519);
+            this.btnAttack.Location = new System.Drawing.Point(169, 476);
             this.btnAttack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAttack.Name = "btnAttack";
             this.btnAttack.Size = new System.Drawing.Size(171, 53);
@@ -92,12 +94,17 @@
             this.lblEnemyHealthFull.Size = new System.Drawing.Size(301, 25);
             this.lblEnemyHealthFull.TabIndex = 6;
             // 
+            // tmrFinalBattle
+            // 
+            this.tmrFinalBattle.Interval = 5600;
+            this.tmrFinalBattle.Tick += new System.EventHandler(this.tmrFinalBattle_Tick);
+            // 
             // picBossBattle
             // 
             this.picBossBattle.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.battle_screen;
             this.picBossBattle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBossBattle.Location = new System.Drawing.Point(1040, 693);
-            this.picBossBattle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBossBattle.Margin = new System.Windows.Forms.Padding(4);
             this.picBossBattle.Name = "picBossBattle";
             this.picBossBattle.Size = new System.Drawing.Size(40, 34);
             this.picBossBattle.TabIndex = 7;
@@ -111,7 +118,7 @@
             this.picEnemy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picEnemy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picEnemy.Location = new System.Drawing.Point(687, 121);
-            this.picEnemy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picEnemy.Margin = new System.Windows.Forms.Padding(4);
             this.picEnemy.Name = "picEnemy";
             this.picEnemy.Size = new System.Drawing.Size(304, 328);
             this.picEnemy.TabIndex = 1;
@@ -124,16 +131,36 @@
             this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picPlayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picPlayer.Location = new System.Drawing.Point(93, 121);
-            this.picPlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picPlayer.Margin = new System.Windows.Forms.Padding(4);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(304, 328);
             this.picPlayer.TabIndex = 0;
             this.picPlayer.TabStop = false;
+            this.picPlayer.Click += new System.EventHandler(this.picPlayer_Click);
             // 
-            // tmrFinalBattle
+            // flee
             // 
-            this.tmrFinalBattle.Interval = 5600;
-            this.tmrFinalBattle.Tick += new System.EventHandler(this.tmrFinalBattle_Tick);
+            this.flee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flee.Location = new System.Drawing.Point(169, 537);
+            this.flee.Margin = new System.Windows.Forms.Padding(4);
+            this.flee.Name = "flee";
+            this.flee.Size = new System.Drawing.Size(171, 53);
+            this.flee.TabIndex = 8;
+            this.flee.Text = "Flee";
+            this.flee.UseVisualStyleBackColor = true;
+            this.flee.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Heal
+            // 
+            this.Heal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Heal.Location = new System.Drawing.Point(169, 598);
+            this.Heal.Margin = new System.Windows.Forms.Padding(4);
+            this.Heal.Name = "Heal";
+            this.Heal.Size = new System.Drawing.Size(171, 53);
+            this.Heal.TabIndex = 9;
+            this.Heal.Text = "Heal";
+            this.Heal.UseVisualStyleBackColor = true;
+            this.Heal.Click += new System.EventHandler(this.Heal_Click_1);
             // 
             // FrmBattle
             // 
@@ -142,6 +169,8 @@
             this.BackColor = System.Drawing.Color.Green;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1096, 742);
+            this.Controls.Add(this.Heal);
+            this.Controls.Add(this.flee);
             this.Controls.Add(this.picBossBattle);
             this.Controls.Add(this.lblEnemyHealthFull);
             this.Controls.Add(this.label2);
@@ -174,5 +203,7 @@
     private System.Windows.Forms.Label lblEnemyHealthFull;
     private System.Windows.Forms.PictureBox picBossBattle;
     private System.Windows.Forms.Timer tmrFinalBattle;
-  }
+        private System.Windows.Forms.Button flee;
+        private System.Windows.Forms.Button Heal;
+    }
 }

@@ -152,6 +152,7 @@ namespace Fall2020_CSC403_Project.code
       Armor = 0;
     }
 
+
     public void OnAttack(int amount) {
       AttackEvent((int)(amount * strength));
     }
