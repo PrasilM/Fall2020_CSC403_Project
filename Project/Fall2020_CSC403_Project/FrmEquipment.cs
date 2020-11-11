@@ -13,7 +13,7 @@ namespace Fall2020_CSC403_Project
 {
     public partial class FrmEquipment : Form 
     {
-        public static FrmEquipment instance = null;
+        //public static FrmEquipment instance = null;
         public Player player;
 
         public FrmEquipment()

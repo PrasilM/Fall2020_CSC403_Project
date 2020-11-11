@@ -5,78 +5,86 @@ using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
 
-namespace Fall2020_CSC403_Project {
-  public partial class FrmBattle : Form {
-    public static FrmBattle instance = null;
-    private Enemy enemy;
-    private Player player;
-    private FrmEquipment equipment;
+namespace Fall2020_CSC403_Project
+{
+    public partial class FrmBattle : Form
+    {
+        public static FrmBattle instance = null;
+        private Enemy enemy;
+        private Player player;
+        private readonly FrmEquipment equipment;
 
-    private FrmBattle() {
-      InitializeComponent();
-      player = Game.player;
-      equipment = new FrmEquipment();
-    }
+        private FrmBattle()
+        {
+            InitializeComponent();
+            player = Game.player;
+            equipment = new FrmEquipment();
+        }
 
-    public void Setup() {
-      // update for this enemy
-      picEnemy.BackgroundImage = enemy.Img;
-      picEnemy.Refresh();
-      BackColor = enemy.Color;
-      picBossBattle.Visible = false;
+        public void Setup()
+        {
+            // update for this enemy
+            picEnemy.BackgroundImage = enemy.Img;
+            picEnemy.Refresh();
+            BackColor = enemy.Color;
+            picBossBattle.Visible = false;
 
             // Update elemental types for both enemy and player
             updateElements();
 
-      // Observer pattern
-      enemy.AttackEvent += PlayerDamage;
-      player.AttackEvent += EnemyDamage;
-      player.HealEvent += PlayerHealing;
+            // Observer pattern
+            enemy.AttackEvent += PlayerDamage;
+            player.AttackEvent += EnemyDamage;
+            player.HealEvent += PlayerHealing;
 
-      // show health
-      UpdateHealthBars();
-    }
+            // show health
+            UpdateHealthBars();
+        }
 
-    public void SetupForBossBattle() {
-      picBossBattle.Location = Point.Empty;
-      picBossBattle.Size = ClientSize;
-      picBossBattle.Visible = true;
+        public void SetupForBossBattle()
+        {
+            picBossBattle.Location = Point.Empty;
+            picBossBattle.Size = ClientSize;
+            picBossBattle.Visible = true;
 
-      SoundPlayer simpleSound = new SoundPlayer(Resources.final_battle);
-      simpleSound.Play();
+            SoundPlayer simpleSound = new SoundPlayer(Resources.final_battle);
+            simpleSound.Play();
 
-      tmrFinalBattle.Enabled = true;
-    }
+            tmrFinalBattle.Enabled = true;
+        }
 
-    public static FrmBattle GetInstance(Enemy enemy) {
-      if (instance == null) {
-        instance = new FrmBattle();
-        instance.enemy = enemy;
-        instance.Setup();
-      }
-      return instance;
-    }
+        public static FrmBattle GetInstance(Enemy enemy)
+        {
+            if (instance == null)
+            {
+                instance = new FrmBattle();
+                instance.enemy = enemy;
+                instance.Setup();
+            }
+            return instance;
+        }
 
-    private void UpdateHealthBars() {
-      float playerHealthPer = player.Health / (float)player.MaxHealth;
-      float enemyHealthPer = enemy.Health / (float)enemy.MaxHealth;
+        private void UpdateHealthBars()
+        {
+            float playerHealthPer = player.Health / (float)player.MaxHealth;
+            float enemyHealthPer = enemy.Health / (float)enemy.MaxHealth;
 
-      const int MAX_HEALTHBAR_WIDTH = 226;
-      lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
-      lblEnemyHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * enemyHealthPer);
+            const int MAX_HEALTHBAR_WIDTH = 226;
+            lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
+            lblEnemyHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * enemyHealthPer);
 
-      lblPlayerHealthFull.Text = player.Health.ToString();
-      lblEnemyHealthFull.Text = enemy.Health.ToString();
-    }
+            lblPlayerHealthFull.Text = player.Health.ToString();
+            lblEnemyHealthFull.Text = enemy.Health.ToString();
+        }
 
-    private void UpdateArmorBars()
-    {
-       float playerArmorPer = player.Armor / (float)player.MaxArmor;
-       const int MAX_ARMORBAR_WIDTH = 226;
-       //lblPlayerArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
+        private void UpdateArmorBars()
+        {
+            float playerArmorPer = player.Armor / (float)player.MaxArmor;
+            const int MAX_ARMORBAR_WIDTH = 226;
+            //lblPlayerArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
 
-       //lblPlayerArmorFull.Text = player.Armor.ToString();
-    }
+            //lblPlayerArmorFull.Text = player.Armor.ToString();
+        }
 
 
         // updates elemental types
@@ -84,7 +92,7 @@ namespace Fall2020_CSC403_Project {
         {
             ElementalStatus.Text = player.elementalType;
             //ElementalStatus.Text = "Fire";
-            if(ElementalStatus.Text == "Fire")
+            if (ElementalStatus.Text == "Fire")
             {
                 ElementalStatus.ForeColor = System.Drawing.Color.Red;
             }
@@ -108,7 +116,7 @@ namespace Fall2020_CSC403_Project {
             {
                 ElementalStatus.ForeColor = Color.White;
             }
-            
+
             // update enemy's type
             enemyElementStat.Text = enemy.elementalType;
             if (enemyElementStat.Text == "Fire")
@@ -137,40 +145,45 @@ namespace Fall2020_CSC403_Project {
             }
         }
 
-    
-
-    private void btnAttack_Click(object sender, EventArgs e) {
-      player.OnAttack(-4);
-      if (enemy.Health > 0) 
-      {
-        enemy.OnAttack(-2);
-      }
-
-      UpdateHealthBars();
-      if (player.Health <= 0 || enemy.Health <= 0) {
-        instance = null;
-        Close();
-      }
-    }
 
 
-    private void EnemyDamage(int amount) {
-      enemy.AlterHealth(amount);
-    }
+        private void btnAttack_Click(object sender, EventArgs e)
+        {
+            player.OnAttack(-4);
+            if (enemy.Health > 0)
+            {
+                enemy.OnAttack(-2);
+            }
 
-    private void PlayerDamage(int amount) {
-      player.AlterHealth(amount);
-    }
+            UpdateHealthBars();
+            if (player.Health <= 0 || enemy.Health <= 0)
+            {
+                instance = null;
+                Close();
+            }
+        }
 
-    private void PlayerHealing(int amount)
-    {
-      player.AlterHealth(amount);
-    }
 
-    private void tmrFinalBattle_Tick(object sender, EventArgs e) {
-      picBossBattle.Visible = false;
-      tmrFinalBattle.Enabled = false;
-    }
+        private void EnemyDamage(int amount)
+        {
+            enemy.AlterHealth(amount);
+        }
+
+        private void PlayerDamage(int amount)
+        {
+            player.AlterHealth(amount);
+        }
+
+        private void PlayerHealing(int amount)
+        {
+            player.AlterHealth(amount);
+        }
+
+        private void tmrFinalBattle_Tick(object sender, EventArgs e)
+        {
+            picBossBattle.Visible = false;
+            tmrFinalBattle.Enabled = false;
+        }
 
         private void FrmBattle_Load(object sender, EventArgs e)
         {
@@ -215,6 +228,21 @@ namespace Fall2020_CSC403_Project {
         private void picPlayer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ElementalStatus_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Equipment_Click(object sender, EventArgs e)
+        {
+            equipment.Show();
         }
     }
 }
