@@ -31,19 +31,19 @@ namespace Fall2020_CSC403_Project.code
     public double elementalBattleCalculation(String et1, String et2)
     {
 
-      if(et1 == "normal")
+      if(et1 == "Normal")
       {
         return 1;
       }
 
-      else if(et1 == "fire")
+      else if(et1 == "Fire")
       {
-        if(et2 == "fire")
+        if(et2 == "Fire")
         {
           return 1;
         }
 
-        else if(et2 == "water")
+        else if(et2 == "Water")
         {
           return 0.5;
         }
@@ -53,7 +53,7 @@ namespace Fall2020_CSC403_Project.code
           return 1.5;
         }
 
-        else if(et2 == "posion")
+        else if(et2 == "Posion")
         {
           return 1;
         }
@@ -64,14 +64,14 @@ namespace Fall2020_CSC403_Project.code
         }
       }
 
-      else if (et1 == "water")
+      else if (et1 == "Water")
       {
-        if(et2 == "fire")
+        if(et2 == "Fire")
         {
           return 0.5;
         }
 
-        else if(et2 == "water")
+        else if(et2 == "Water")
         {
           return 1;
         }
@@ -81,7 +81,7 @@ namespace Fall2020_CSC403_Project.code
           return 1;
         }
 
-        else if(et2 == "posion")
+        else if(et2 == "Posion")
         {
           return 1.5;
         }
@@ -94,12 +94,12 @@ namespace Fall2020_CSC403_Project.code
 
       else if(et1 == "Earth")
       {
-        if(et2 == "fire")
+        if(et2 == "Fire")
         {
           return 1.5;
         }
 
-        else if(et2 == "water")
+        else if(et2 == "Water")
         {
           return 0.5;
         }
@@ -109,7 +109,7 @@ namespace Fall2020_CSC403_Project.code
           return 1;
         }
 
-        else if(et2 == "posion")
+        else if(et2 == "Posion")
         {
           return 1;
         }
@@ -122,12 +122,12 @@ namespace Fall2020_CSC403_Project.code
 
       else
       {
-        if(et2 == "fire")
+        if(et2 == "Fire")
         {
           return 1.5;
         }
 
-        else if(et2 == "water")
+        else if(et2 == "Water")
         {
           return 1.5;
         }
@@ -137,7 +137,7 @@ namespace Fall2020_CSC403_Project.code
           return 1.5;
         }
 
-        else if(et2 == "posion")
+        else if(et2 == "Posion")
         {
           return 1;
         }
