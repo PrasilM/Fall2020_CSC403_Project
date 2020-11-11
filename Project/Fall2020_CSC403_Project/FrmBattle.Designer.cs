@@ -35,6 +35,10 @@
             this.picPlayer = new System.Windows.Forms.PictureBox();
             this.flee = new System.Windows.Forms.Button();
             this.Heal = new System.Windows.Forms.Button();
+            this.ElementalStatus = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.enemyElementStat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
@@ -43,8 +47,8 @@
             // btnAttack
             // 
             this.btnAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttack.Location = new System.Drawing.Point(169, 476);
-            this.btnAttack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAttack.Location = new System.Drawing.Point(225, 476);
+            this.btnAttack.Margin = new System.Windows.Forms.Padding(4);
             this.btnAttack.Name = "btnAttack";
             this.btnAttack.Size = new System.Drawing.Size(171, 53);
             this.btnAttack.TabIndex = 2;
@@ -141,7 +145,7 @@
             // flee
             // 
             this.flee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flee.Location = new System.Drawing.Point(169, 537);
+            this.flee.Location = new System.Drawing.Point(225, 537);
             this.flee.Margin = new System.Windows.Forms.Padding(4);
             this.flee.Name = "flee";
             this.flee.Size = new System.Drawing.Size(171, 53);
@@ -153,7 +157,7 @@
             // Heal
             // 
             this.Heal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Heal.Location = new System.Drawing.Point(169, 598);
+            this.Heal.Location = new System.Drawing.Point(225, 598);
             this.Heal.Margin = new System.Windows.Forms.Padding(4);
             this.Heal.Name = "Heal";
             this.Heal.Size = new System.Drawing.Size(171, 53);
@@ -162,6 +166,56 @@
             this.Heal.UseVisualStyleBackColor = true;
             this.Heal.Click += new System.EventHandler(this.Heal_Click_1);
             // 
+            // ElementalStatus
+            // 
+            this.ElementalStatus.BackColor = System.Drawing.Color.Green;
+            this.ElementalStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ElementalStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ElementalStatus.ForeColor = System.Drawing.Color.White;
+            this.ElementalStatus.Location = new System.Drawing.Point(138, 492);
+            this.ElementalStatus.Name = "ElementalStatus";
+            this.ElementalStatus.Size = new System.Drawing.Size(80, 19);
+            this.ElementalStatus.TabIndex = 10;
+            this.ElementalStatus.Text = "Normal";
+            this.ElementalStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ElementalStatus.TextChanged += new System.EventHandler(this.ElementalStatus_TextChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Green;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox1.Location = new System.Drawing.Point(12, 492);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(130, 19);
+            this.textBox1.TabIndex = 11;
+            this.textBox1.Text = "Elemental Type:";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Green;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox2.Location = new System.Drawing.Point(677, 492);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(130, 19);
+            this.textBox2.TabIndex = 12;
+            this.textBox2.Text = "Elemental Type:";
+            // 
+            // enemyElementStat
+            // 
+            this.enemyElementStat.BackColor = System.Drawing.Color.Green;
+            this.enemyElementStat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.enemyElementStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.enemyElementStat.ForeColor = System.Drawing.Color.White;
+            this.enemyElementStat.Location = new System.Drawing.Point(813, 492);
+            this.enemyElementStat.Name = "enemyElementStat";
+            this.enemyElementStat.Size = new System.Drawing.Size(80, 19);
+            this.enemyElementStat.TabIndex = 13;
+            this.enemyElementStat.Text = "Normal";
+            this.enemyElementStat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmBattle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -169,6 +223,10 @@
             this.BackColor = System.Drawing.Color.Green;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1096, 742);
+            this.Controls.Add(this.enemyElementStat);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ElementalStatus);
             this.Controls.Add(this.Heal);
             this.Controls.Add(this.flee);
             this.Controls.Add(this.picBossBattle);
@@ -180,7 +238,7 @@
             this.Controls.Add(this.picEnemy);
             this.Controls.Add(this.picPlayer);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmBattle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Fight!";
@@ -189,6 +247,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
     }
 
@@ -205,5 +264,9 @@
     private System.Windows.Forms.Timer tmrFinalBattle;
         private System.Windows.Forms.Button flee;
         private System.Windows.Forms.Button Heal;
+        public System.Windows.Forms.TextBox ElementalStatus;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox enemyElementStat;
     }
 }

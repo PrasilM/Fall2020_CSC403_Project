@@ -12,10 +12,10 @@ namespace Fall2020_CSC403_Project.code {
     // Image for player
     public Image Img { get; set; }
 
-    public Player(Vector2 initPos, Collider collider) : base(initPos, collider) {
+    public Player(Vector2 initPos, Collider collider, String eleType) : base(initPos, collider) {
 
-      // Ask player what avatar, and by extension which elemental type they want
-
+            // Ask player what avatar, and by extension which elemental type they want
+            this.elementalType = eleType;
     }
   }
 }

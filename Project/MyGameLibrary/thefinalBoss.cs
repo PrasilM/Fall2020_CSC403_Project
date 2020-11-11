@@ -8,8 +8,9 @@ namespace Fall2020_CSC403_Project.code
 {
     public class thefinalBoss: BattleCharacter
     {
-        public thefinalBoss(Vector2 initPos, Collider collider) : base(initPos, collider)
+        public thefinalBoss(Vector2 initPos, Collider collider, string eleType) : base(initPos, collider)
         {
+            elementalType = eleType;
             //initilize boss paramaters
             this.MaxHealth = 100;
             this.Health = MaxHealth;

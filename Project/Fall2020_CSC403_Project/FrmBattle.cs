@@ -24,6 +24,9 @@ namespace Fall2020_CSC403_Project {
       BackColor = enemy.Color;
       picBossBattle.Visible = false;
 
+            // Update elemental types for both enemy and player
+            updateElements();
+
       // Observer pattern
       enemy.AttackEvent += PlayerDamage;
       player.AttackEvent += EnemyDamage;
@@ -73,6 +76,65 @@ namespace Fall2020_CSC403_Project {
 
        //lblPlayerArmorFull.Text = player.Armor.ToString();
     }
+
+
+        // updates elemental types
+        private void updateElements()
+        {
+            ElementalStatus.Text = player.elementalType;
+            //ElementalStatus.Text = "Fire";
+            if(ElementalStatus.Text == "Fire")
+            {
+                ElementalStatus.ForeColor = System.Drawing.Color.Red;
+            }
+
+            else if (ElementalStatus.Text == "Water")
+            {
+                ElementalStatus.ForeColor = Color.Blue;
+            }
+
+            else if (ElementalStatus.Text == "Earth")
+            {
+                ElementalStatus.ForeColor = Color.Brown;
+            }
+
+            else if (ElementalStatus.Text == "Posion")
+            {
+                ElementalStatus.ForeColor = Color.Purple;
+            }
+
+            else
+            {
+                ElementalStatus.ForeColor = Color.White;
+            }
+            
+            // update enemy's type
+            enemyElementStat.Text = enemy.elementalType;
+            if (enemyElementStat.Text == "Fire")
+            {
+                enemyElementStat.ForeColor = System.Drawing.Color.Red;
+            }
+
+            else if (enemyElementStat.Text == "Water")
+            {
+                enemyElementStat.ForeColor = Color.Blue;
+            }
+
+            else if (enemyElementStat.Text == "Earth")
+            {
+                enemyElementStat.ForeColor = Color.Brown;
+            }
+
+            else if (enemyElementStat.Text == "Posion")
+            {
+                enemyElementStat.ForeColor = Color.Purple;
+            }
+
+            else
+            {
+                enemyElementStat.ForeColor = Color.White;
+            }
+        }
 
     
 
@@ -130,6 +192,11 @@ namespace Fall2020_CSC403_Project {
 
             }
 
+            if (enemy.Health > 0)
+            {
+                enemy.OnAttack(-2);
+            }
+
         }
 
         // HEAL
@@ -145,6 +212,16 @@ namespace Fall2020_CSC403_Project {
         }
 
         private void picPlayer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ElementalStatus_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
