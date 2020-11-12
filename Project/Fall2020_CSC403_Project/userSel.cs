@@ -12,6 +12,7 @@ namespace Fall2020_CSC403_Project
 {
     public partial class userSel : Form
     {
+        public string gameAvatar;
         public userSel()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Fall2020_CSC403_Project
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -33,6 +34,11 @@ namespace Fall2020_CSC403_Project
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

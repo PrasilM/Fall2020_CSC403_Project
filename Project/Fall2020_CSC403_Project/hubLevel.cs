@@ -25,7 +25,7 @@ namespace Fall2020_CSC403_Project
 
         private void hubLevel_Load(Object sender, EventArgs e)
         {
-            NPCcashewBro = new NPC(CreatePosition(picCashewBro), CreateCollider(picCashewBro, PADDING));
+            //NPCcashewBro = new NPC(CreatePosition(picCashewBro), CreateCollider(picCashewBro, PADDING));
         }
 
         private Vector2 CreatePosition(PictureBox pic)

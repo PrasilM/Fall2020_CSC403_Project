@@ -39,7 +39,6 @@
             this.picEnemy = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
             this.flee = new System.Windows.Forms.Button();
-            this.Heal = new System.Windows.Forms.Button();
             this.ElementalStatus = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -162,18 +161,6 @@
             this.flee.UseVisualStyleBackColor = true;
             this.flee.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Heal
-            // 
-            this.Heal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Heal.Location = new System.Drawing.Point(225, 598);
-            this.Heal.Margin = new System.Windows.Forms.Padding(4);
-            this.Heal.Name = "Heal";
-            this.Heal.Size = new System.Drawing.Size(171, 53);
-            this.Heal.TabIndex = 9;
-            this.Heal.Text = "Heal";
-            this.Heal.UseVisualStyleBackColor = true;
-            this.Heal.Click += new System.EventHandler(this.Heal_Click_1);
-            // 
             // ElementalStatus
             // 
             this.ElementalStatus.BackColor = System.Drawing.Color.Green;
@@ -237,10 +224,10 @@
             // 
             // Food
             // 
-            this.Food.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Food.Location = new System.Drawing.Point(403, 523);
+            this.Food.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Food.Location = new System.Drawing.Point(225, 597);
             this.Food.Name = "Food";
-            this.Food.Size = new System.Drawing.Size(97, 38);
+            this.Food.Size = new System.Drawing.Size(171, 53);
             this.Food.TabIndex = 15;
             this.Food.Text = "Food";
             this.Food.UseVisualStyleBackColor = true;
@@ -259,7 +246,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ElementalStatus);
-            this.Controls.Add(this.Heal);
             this.Controls.Add(this.flee);
             this.Controls.Add(this.picBossBattle);
             this.Controls.Add(this.lblEnemyHealthFull);
@@ -285,7 +271,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox picPlayer;
+        public System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.PictureBox picEnemy;
         private System.Windows.Forms.Button btnAttack;
         private System.Windows.Forms.Label lblPlayerHealthFull;
@@ -295,7 +281,6 @@
         private System.Windows.Forms.PictureBox picBossBattle;
         private System.Windows.Forms.Timer tmrFinalBattle;
         private System.Windows.Forms.Button flee;
-        private System.Windows.Forms.Button Heal;
         public System.Windows.Forms.TextBox ElementalStatus;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
