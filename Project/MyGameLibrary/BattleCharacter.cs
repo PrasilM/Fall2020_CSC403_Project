@@ -29,32 +29,32 @@ namespace Fall2020_CSC403_Project.code
 
         public event Action<int> LevelEvent;
 
-        public double elementalBattleCalculation(String et1, String et2)
+        public double elementalBattleCalculation(BattleCharacter atr, BattleCharacter def)
         {
 
-            if (et1 == "Normal")
+            if (atr.elementalType == "Normal")
             {
                 return 1;
             }
 
-            else if (et1 == "Fire")
+            else if (atr.elementalType == "Fire")
             {
-                if (et2 == "Fire")
+                if (def.elementalType == "Fire")
                 {
                     return 1;
                 }
 
-                else if (et2 == "Water")
+                else if (def.elementalType == "Water")
                 {
                     return 0.5;
                 }
 
-                else if (et2 == "Earth")
+                else if (def.elementalType == "Earth")
                 {
                     return 1.5;
                 }
 
-                else if (et2 == "Posion")
+                else if (def.elementalType == "Posion")
                 {
                     return 1;
                 }
@@ -65,24 +65,24 @@ namespace Fall2020_CSC403_Project.code
                 }
             }
 
-            else if (et1 == "Water")
+            else if (atr.elementalType == "Water")
             {
-                if (et2 == "Fire")
+                if (def.elementalType == "Fire")
                 {
                     return 0.5;
                 }
 
-                else if (et2 == "Water")
+                else if (def.elementalType == "Water")
                 {
                     return 1;
                 }
 
-                else if (et2 == "Earth")
+                else if (def.elementalType == "Earth")
                 {
                     return 1;
                 }
 
-                else if (et2 == "Posion")
+                else if (def.elementalType == "Posion")
                 {
                     return 1.5;
                 }
@@ -93,24 +93,24 @@ namespace Fall2020_CSC403_Project.code
                 }
             }
 
-            else if (et1 == "Earth")
+            else if (atr.elementalType == "Earth")
             {
-                if (et2 == "Fire")
+                if (def.elementalType == "Fire")
                 {
                     return 1.5;
                 }
 
-                else if (et2 == "Water")
+                else if (def.elementalType == "Water")
                 {
                     return 0.5;
                 }
 
-                else if (et2 == "Earth")
+                else if (def.elementalType == "Earth")
                 {
                     return 1;
                 }
 
-                else if (et2 == "Posion")
+                else if (def.elementalType == "Posion")
                 {
                     return 1;
                 }
@@ -123,29 +123,29 @@ namespace Fall2020_CSC403_Project.code
 
             else
             {
-                if (et2 == "Fire")
+                if (def.elementalType == "Fire")
                 {
                     return 1.5;
                 }
 
-                else if (et2 == "Water")
+                else if (def.elementalType == "Water")
                 {
                     return 1.5;
                 }
 
-                else if (et2 == "Earth")
+                else if (def.elementalType == "Earth")
                 {
                     return 1.5;
                 }
 
-                else if (et2 == "Posion")
+                else if (def.elementalType == "Posion")
                 {
                     return 1;
                 }
 
                 else
                 {
-                    return 0.5;
+                    return 1.5;
                 }
             }
 
@@ -163,9 +163,9 @@ namespace Fall2020_CSC403_Project.code
         }
 
 
-        public void OnAttack(int amount)
+        public void OnAttack(int amount, BattleCharacter atr, BattleCharacter def)
         {
-            AttackEvent((int)(amount * strength));
+            AttackEvent((int)(amount *elementalBattleCalculation(atr,def) * strength));
         }
 
         // function to heal (either via button or item)
