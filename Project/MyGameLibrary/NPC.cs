@@ -9,6 +9,7 @@ namespace Fall2020_CSC403_Project.code {
   public class NPC : Character
   {
         public Image Img { get; set; }
+
         public NPC(Vector2 initPos, Collider collider) : base(initPos, collider) {
     }
   }
