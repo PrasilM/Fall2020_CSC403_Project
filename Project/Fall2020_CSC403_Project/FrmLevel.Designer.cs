@@ -45,6 +45,8 @@
             this.picWall3 = new System.Windows.Forms.PictureBox();
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
+            this.lblPlayerExpFull = new System.Windows.Forms.Label();
+            this.labelplayerexp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall8)).BeginInit();
@@ -297,6 +299,26 @@
             this.picPlayer.TabStop = false;
             this.picPlayer.Click += new System.EventHandler(this.picPlayer_Click);
             // 
+            // lblPlayerExpFull
+            // 
+            this.lblPlayerExpFull.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblPlayerExpFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerExpFull.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblPlayerExpFull.Location = new System.Drawing.Point(26, 860);
+            this.lblPlayerExpFull.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlayerExpFull.Name = "lblPlayerExpFull";
+            this.lblPlayerExpFull.Size = new System.Drawing.Size(50, 25);
+            this.lblPlayerExpFull.TabIndex = 18;
+            // 
+            // labelplayerexp
+            // 
+            this.labelplayerexp.AutoSize = true;
+            this.labelplayerexp.Location = new System.Drawing.Point(17, 832);
+            this.labelplayerexp.Name = "labelplayerexp";
+            this.labelplayerexp.Size = new System.Drawing.Size(79, 17);
+            this.labelplayerexp.TabIndex = 19;
+            this.labelplayerexp.Text = "Player EXP";
+            // 
             // FrmLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -304,6 +326,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1568, 894);
+            this.Controls.Add(this.labelplayerexp);
+            this.Controls.Add(this.lblPlayerExpFull);
             this.Controls.Add(this.picWall11);
             this.Controls.Add(this.picWall2);
             this.Controls.Add(this.picWall8);
@@ -374,6 +398,8 @@
     private System.Windows.Forms.PictureBox picWall1;
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
-  }
+        private System.Windows.Forms.Label lblPlayerExpFull;
+        private System.Windows.Forms.Label labelplayerexp;
+    }
 }
 

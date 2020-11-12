@@ -36,21 +36,21 @@ namespace Fall2020_CSC403_Project
 
         private void flipflops_Click(object sender, EventArgs e)
         {
-            player.AdditionalStrength(20);
+            player.AdditionalStrength(10);
             flipflops.Enabled = false;
             this.Visible = false;
         }
 
         private void Sword_Click(object sender, EventArgs e)
         {
-            player.AdditionalStrength(2);
+            player.AdditionalStrength(1);
             Sword.Enabled = false;
             this.Visible = false;
         }
 
         private void wand_Click(object sender, EventArgs e)
         {
-            player.AdditionalStrength(3);
+            player.AdditionalStrength(1);
             wand.Enabled = false;
         }
 
@@ -64,7 +64,7 @@ namespace Fall2020_CSC403_Project
         private void ring_Click(object sender, EventArgs e)
         {
             player.AdditionalArmor(-1);
-            player.AdditionalStrength(5);
+            player.AdditionalStrength(2);
             ring.Enabled = false;
             this.Visible = false;
         }

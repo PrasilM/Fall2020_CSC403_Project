@@ -107,7 +107,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(77, 22);
             this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "Strength +2";
+            this.textBox1.Text = "Strength +1";
             // 
             // textBox2
             // 
@@ -115,7 +115,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(77, 22);
             this.textBox2.TabIndex = 7;
-            this.textBox2.Text = "Strength +3";
+            this.textBox2.Text = "Strength +1";
             // 
             // textBox3
             // 
@@ -131,7 +131,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(131, 22);
             this.textBox4.TabIndex = 9;
-            this.textBox4.Text = "Strength +5, Armor -1";
+            this.textBox4.Text = "Strength +2, Armor -1";
             // 
             // textBox5
             // 
@@ -139,9 +139,9 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(80, 22);
             this.textBox5.TabIndex = 10;
-            this.textBox5.Text = "Strength +20";
+            this.textBox5.Text = "Strength +10";
             // 
-            // Equipment
+            // FrmEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,7 +156,7 @@
             this.Controls.Add(this.cloak);
             this.Controls.Add(this.wand);
             this.Controls.Add(this.Sword);
-            this.Name = "Equipment";
+            this.Name = "FrmEquipment";
             this.Text = "Equipment";
             this.ResumeLayout(false);
             this.PerformLayout();

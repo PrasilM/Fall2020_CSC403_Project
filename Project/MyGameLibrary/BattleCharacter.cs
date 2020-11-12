@@ -192,10 +192,16 @@ namespace Fall2020_CSC403_Project.code
         {
             strength += amount;
         }
-
+        //Level/exp 
         public void LevelUp(int amount)
         {
             LevelEvent((int)(amount));
         }
+
+        public void AlterExp(int amount)
+        {
+            Level += amount;
+        }
+
     }
 }

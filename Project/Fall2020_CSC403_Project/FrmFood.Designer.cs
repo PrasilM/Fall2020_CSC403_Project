@@ -103,7 +103,7 @@
             this.lblApple.Name = "lblApple";
             this.lblApple.Size = new System.Drawing.Size(95, 17);
             this.lblApple.TabIndex = 5;
-            this.lblApple.Text = "Heals hp by 2";
+            this.lblApple.Text = "Heals hp by 1";
             // 
             // lblChicken
             // 
@@ -112,7 +112,7 @@
             this.lblChicken.Name = "lblChicken";
             this.lblChicken.Size = new System.Drawing.Size(95, 17);
             this.lblChicken.TabIndex = 6;
-            this.lblChicken.Text = "Heals hp by 3";
+            this.lblChicken.Text = "Heals hp by 2";
             // 
             // lblTaco
             // 
@@ -121,7 +121,7 @@
             this.lblTaco.Name = "lblTaco";
             this.lblTaco.Size = new System.Drawing.Size(95, 17);
             this.lblTaco.TabIndex = 7;
-            this.lblTaco.Text = "Heals hp by 5";
+            this.lblTaco.Text = "Heals hp by 2";
             // 
             // lblherb
             // 

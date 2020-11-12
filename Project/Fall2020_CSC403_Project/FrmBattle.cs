@@ -40,6 +40,11 @@ namespace Fall2020_CSC403_Project
             player.AttackEvent += EnemyDamage;
             player.HealEvent += PlayerHealing;
 
+/*            if (enemy.MaxHealth == 0)
+            {
+                player.LevelEvent += PlayerLeveling;
+            }*/
+
             // show health
             UpdateHealthBars();
         }
@@ -65,7 +70,9 @@ namespace Fall2020_CSC403_Project
                 instance.Setup();
             }
             return instance;
+            
         }
+
 
         private void UpdateHealthBars()
         {
@@ -164,6 +171,12 @@ namespace Fall2020_CSC403_Project
             if (player.Health <= 0 || enemy.Health <= 0)
             {
                 instance = null;
+                if (enemy.Health <= 0)
+                {
+                    Random r = new Random();
+                    player.AlterExp(r.Next(2, 5));
+
+                }
                 Close();
             }
         }
@@ -182,6 +195,13 @@ namespace Fall2020_CSC403_Project
         private void PlayerHealing(int amount)
         {
             player.AlterHealth(amount);
+            UpdateHealthBars();
+        }
+
+        //Player leveling exp
+        private void PlayerLeveling(int amount)
+        {
+            player.LevelUp(amount);
         }
 
         private void tmrFinalBattle_Tick(object sender, EventArgs e)

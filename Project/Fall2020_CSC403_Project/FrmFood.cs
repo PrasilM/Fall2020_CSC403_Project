@@ -24,7 +24,7 @@ namespace Fall2020_CSC403_Project
 
         private void Apple_Click(object sender, EventArgs e)
         {
-            player.duringHeal(2);
+            player.duringHeal(1);
             Apple.Enabled = false;
 
             this.Visible = false;
@@ -33,7 +33,7 @@ namespace Fall2020_CSC403_Project
 
         private void Chicken_Click(object sender, EventArgs e)
         {
-            player.duringHeal(3);
+            player.duringHeal(2);
             Chicken.Enabled = false;
 
             this.Visible = false;
@@ -41,7 +41,7 @@ namespace Fall2020_CSC403_Project
 
         private void Taco_Click(object sender, EventArgs e)
         {
-            player.duringHeal(5);
+            player.duringHeal(2);
             Taco.Enabled = false;
 
             this.Visible = false;
@@ -49,7 +49,7 @@ namespace Fall2020_CSC403_Project
 
         private void punch_Click(object sender, EventArgs e)
         {
-            player.duringHeal(10);
+            player.duringHeal(5);
             punch.Enabled = false;
 
             this.Visible = false;
@@ -61,6 +61,7 @@ namespace Fall2020_CSC403_Project
             Herb.Enabled = false;
 
             this.Visible = false;
+            System.Windows.Forms.MessageBox.Show("Oops! wrong herb, gg");
         }
     }
 }

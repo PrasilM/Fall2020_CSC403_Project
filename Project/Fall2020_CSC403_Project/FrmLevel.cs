@@ -22,6 +22,7 @@ namespace Fall2020_CSC403_Project {
 
     public FrmLevel() {
       InitializeComponent();
+ 
     }
 
     private void FrmLevel_Load(object sender, EventArgs e) {
@@ -49,6 +50,7 @@ namespace Fall2020_CSC403_Project {
 
       Game.player = player;
       timeBegin = DateTime.Now;
+    UpdateExpBars();
     }
 
     private Vector2 CreatePosition(PictureBox pic) {
@@ -68,7 +70,8 @@ namespace Fall2020_CSC403_Project {
       TimeSpan span = DateTime.Now - timeBegin;
       string time = span.ToString(@"hh\:mm\:ss");
       lblInGameTime.Text = "Time: " + time.ToString();
-    }
+            UpdateExpBars();
+        }
 
     private void tmrPlayerMove_Tick(object sender, EventArgs e) {
             
@@ -141,11 +144,12 @@ namespace Fall2020_CSC403_Project {
         frmBattle.SetupForBossBattle();
       }
 
-      // setup for final boss
-      /*if(enemy == finalBoss)
-      {
-        //frmBattle
-      }*/
+            // setup for final boss
+            /*if(enemy == finalBoss)
+            {
+              //frmBattle
+            }*/
+            UpdateExpBars();
     }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
@@ -205,5 +209,17 @@ namespace Fall2020_CSC403_Project {
         {
 
         }
+        private void UpdateExpBars()
+        {
+            float playerExpPer = player.Level / (float)player.MaxLevel;
+
+            const int MAX_EXPBAR_WIDTH = 226;
+            lblPlayerExpFull.Width = (int)(MAX_EXPBAR_WIDTH * playerExpPer);
+
+            lblPlayerExpFull.Text = player.Level.ToString();
+        }
+
     }
+
+
 }
