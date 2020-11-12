@@ -122,6 +122,7 @@
             this.lblTaco.Size = new System.Drawing.Size(95, 17);
             this.lblTaco.TabIndex = 7;
             this.lblTaco.Text = "Heals hp by 2";
+            this.lblTaco.Click += new System.EventHandler(this.lblTaco_Click);
             // 
             // lblherb
             // 

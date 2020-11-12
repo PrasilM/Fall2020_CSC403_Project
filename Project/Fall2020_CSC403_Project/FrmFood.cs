@@ -63,5 +63,10 @@ namespace Fall2020_CSC403_Project
             this.Visible = false;
             System.Windows.Forms.MessageBox.Show("Oops! wrong herb, gg");
         }
+
+        private void lblTaco_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

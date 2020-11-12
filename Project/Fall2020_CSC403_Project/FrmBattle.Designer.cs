@@ -134,6 +134,7 @@
             this.picEnemy.Size = new System.Drawing.Size(304, 328);
             this.picEnemy.TabIndex = 1;
             this.picEnemy.TabStop = false;
+            this.picEnemy.Click += new System.EventHandler(this.picEnemy_Click);
             // 
             // picPlayer
             // 

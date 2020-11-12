@@ -12,6 +12,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
+        private Lose loseScreen;
 
     ///private NPC NPCAlmondBoi;
 
@@ -24,6 +25,7 @@ namespace Fall2020_CSC403_Project {
 
     public FrmLevel() {
       InitializeComponent();
+            loseScreen = new Lose();
  
     }
 
@@ -84,6 +86,14 @@ namespace Fall2020_CSC403_Project {
             // check to see if player is alive
             if (player.Health <= 0)
             {
+                if(loseScreen != null)
+                {
+                    picPlayer.BackgroundImage = null;
+                    loseScreen.Show();
+                    loseScreen = null;
+                    this.Hide();
+                }
+
                 
             }
 
@@ -160,7 +170,7 @@ namespace Fall2020_CSC403_Project {
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
             if(player.Health <= 0)
             {
-                picPlayer.BackgroundImage = null;
+                
             }
 
             else
