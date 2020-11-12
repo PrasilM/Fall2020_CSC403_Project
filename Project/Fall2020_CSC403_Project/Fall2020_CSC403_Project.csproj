@@ -45,6 +45,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEquipment.Designer.cs">
+      <DependentUpon>FrmEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="finalBoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="finalBoss.Designer.cs">
+      <DependentUpon>finalBoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFood.Designer.cs">
+      <DependentUpon>FrmFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLevel2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLevel2.Designer.cs">
+      <DependentUpon>FrmLevel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hubLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hubLevel.Designer.cs">
+      <DependentUpon>hubLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userSel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userSel.Designer.cs">
+      <DependentUpon>userSel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBattle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,8 +95,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEquipment.resx">
+      <DependentUpon>FrmEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="finalBoss.resx">
+      <DependentUpon>finalBoss.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBattle.resx">
       <DependentUpon>FrmBattle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFood.resx">
+      <DependentUpon>FrmFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLevel.resx">
       <DependentUpon>FrmLevel.cs</DependentUpon>
@@ -69,6 +114,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userSel.resx">
+      <DependentUpon>userSel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
@@ -119,6 +167,15 @@
       <Project>{F1E60F80-1868-4FE5-991B-FDDCFAF9B16B}</Project>
       <Name>MyGameLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\bossFloor.jpg" />
+    <None Include="data\bossFloorNew.jpg" />
+    <None Include="data\boss wall.jpg" />
+    <Content Include="data\cloak.png" />
+    <Content Include="data\flipflop.jpg" />
+    <Content Include="data\sword.jpg" />
+    <Content Include="data\wand.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
