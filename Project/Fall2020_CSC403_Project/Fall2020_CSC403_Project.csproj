@@ -170,6 +170,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\bossFloor.jpg" />
+    <None Include="data\bossFloorNew.jpg" />
+    <None Include="data\boss wall.jpg" />
     <Content Include="data\cloak.png" />
     <Content Include="data\flipflop.jpg" />
     <Content Include="data\sword.jpg" />
