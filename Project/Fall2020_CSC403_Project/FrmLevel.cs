@@ -9,6 +9,7 @@ using System.Windows.Forms;
 namespace Fall2020_CSC403_Project {
   public partial class FrmLevel : Form {
     private Player player = Game.player;
+        private FrmLevel2 level;
 
     private Enemy enemyPoisonPacket;
     private Enemy enemyCheeto;
@@ -64,8 +65,10 @@ namespace Fall2020_CSC403_Project {
         PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
         walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
       }
+            PictureBox pic1 = Controls.Find("ExitLevel", true)[0] as PictureBox;
+            exit = new Character(CreatePosition(pic1), CreateCollider(pic1, PADDING));
 
-      Game.player = player;
+            Game.player = player;
       timeBegin = DateTime.Now;
     UpdateExpBars();
     }
@@ -117,12 +120,12 @@ namespace Fall2020_CSC403_Project {
                 {
                     player.MoveBack();
                 }
-                /*if(HitTheExit(player))
+                if(HitTheExit(player))
                 {
-                    Application.EnableVisualStyles();
-                    Application.SetCompatibleTextRenderingDefault(false);
-                    Application.Run(new hubLevel());
-                }*/
+                    player.GoLeft();
+                    level = new FrmLevel2();
+                    level.Show();
+                }
 
                 // check collision with enemies
                 if (HitAChar(player, enemyPoisonPacket))
@@ -176,13 +179,13 @@ namespace Fall2020_CSC403_Project {
       }
       return hitAWall;
     }
-   /* private bool HitTheExit(Character c)
+    private bool HitTheExit(Character c)
         {
             bool hitTheExit = false;
             if (c.Collider.Intersects(exit.Collider))
                 hitTheExit = true;
             return hitTheExit;
-        }*/
+        }
 
     private bool HitAChar(Character you, Character other) {
       return you.Collider.Intersects(other.Collider);

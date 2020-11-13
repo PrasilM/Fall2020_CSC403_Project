@@ -14,6 +14,7 @@ namespace Fall2020_CSC403_Project
     public partial class FrmLevel2 : Form
     {
         private Player player;
+        private finalBoss level;
 
         private Enemy enemy1;
         private Enemy enemy2;
@@ -92,6 +93,8 @@ namespace Fall2020_CSC403_Project
                 PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
                 walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
             }
+            PictureBox pic1 = Controls.Find("ExitLevel", true)[0] as PictureBox;
+            exit = new Character(CreatePosition(pic1), CreateCollider(pic1, PADDING));
 
             Game.player = player;
             timeBegin = DateTime.Now;
@@ -215,6 +218,12 @@ namespace Fall2020_CSC403_Project
                 if (HitAWall(player))
                 {
                     player.MoveBack();
+                }
+                if (HitTheExit(player))
+                {
+                    player.GoLeft();
+                    level = new finalBoss();
+                    level.Show();
                 }
 
                 // check collision with enemies

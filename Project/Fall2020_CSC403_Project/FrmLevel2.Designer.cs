@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLevel2));
             this.picRaidIt = new System.Windows.Forms.PictureBox();
             this.picWall0 = new System.Windows.Forms.PictureBox();
             this.picWall2 = new System.Windows.Forms.PictureBox();
@@ -49,6 +50,7 @@
             this.L2enemy1 = new System.Windows.Forms.PictureBox();
             this.L2enemy2 = new System.Windows.Forms.PictureBox();
             this.L2enemy3 = new System.Windows.Forms.PictureBox();
+            this.ExitLevel = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picRaidIt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
@@ -64,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.L2enemy1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L2enemy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.L2enemy3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitLevel)).BeginInit();
             this.SuspendLayout();
             // 
             // picRaidIt
@@ -253,7 +256,7 @@
             this.L2enemy2.BackColor = System.Drawing.Color.Transparent;
             this.L2enemy2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.grape_packet;
             this.L2enemy2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.L2enemy2.Location = new System.Drawing.Point(1371, 133);
+            this.L2enemy2.Location = new System.Drawing.Point(1375, 319);
             this.L2enemy2.Name = "L2enemy2";
             this.L2enemy2.Size = new System.Drawing.Size(106, 157);
             this.L2enemy2.TabIndex = 22;
@@ -270,12 +273,23 @@
             this.L2enemy3.TabIndex = 23;
             this.L2enemy3.TabStop = false;
             // 
+            // ExitLevel
+            // 
+            this.ExitLevel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExitLevel.BackgroundImage")));
+            this.ExitLevel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExitLevel.Location = new System.Drawing.Point(1349, -3);
+            this.ExitLevel.Name = "ExitLevel";
+            this.ExitLevel.Size = new System.Drawing.Size(218, 251);
+            this.ExitLevel.TabIndex = 24;
+            this.ExitLevel.TabStop = false;
+            // 
             // FrmLevel2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.grassTexture;
             this.ClientSize = new System.Drawing.Size(1568, 894);
+            this.Controls.Add(this.ExitLevel);
             this.Controls.Add(this.L2enemy3);
             this.Controls.Add(this.L2enemy2);
             this.Controls.Add(this.L2enemy1);
@@ -314,6 +328,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.L2enemy1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.L2enemy2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.L2enemy3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitLevel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,5 +356,6 @@
         public System.Windows.Forms.PictureBox L2enemy1;
         public System.Windows.Forms.PictureBox L2enemy2;
         public System.Windows.Forms.PictureBox L2enemy3;
+        private System.Windows.Forms.PictureBox ExitLevel;
     }
 }
