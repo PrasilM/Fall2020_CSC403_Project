@@ -61,7 +61,7 @@ namespace Fall2020_CSC403_Project
 
             NPCraidIt = new NPC(CreatePosition(picRaidIt), CreateCollider(picRaidIt, PADDING));
 
-            const int NUM_WALLS = 13;
+            const int NUM_WALLS = 11;
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Normal");
             //enemy1 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Posion");
@@ -108,6 +108,45 @@ namespace Fall2020_CSC403_Project
             return hitAWall;
         }
 
+        private void FrmLevel2_KeyUp(object sender, KeyEventArgs e)
+        {
+            player.ResetMoveSpeed();
+        }
+        private void FrmLevel2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (player.Health <= 0)
+            {
+
+            }
+
+            else
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Left:
+                        player.GoLeft();
+                        break;
+
+                    case Keys.Right:
+                        player.GoRight();
+                        break;
+
+                    case Keys.Up:
+                        player.GoUp();
+                        break;
+
+                    case Keys.Down:
+                        player.GoDown();
+                        break;
+
+                    default:
+                        player.ResetMoveSpeed();
+                        break;
+                }
+            }
+
+        }
+
         private bool HitAChar(Character you, Character other)
         {
             return you.Collider.Intersects(other.Collider);
@@ -121,6 +160,89 @@ namespace Fall2020_CSC403_Project
             frmBattle.Show();
 
             UpdateExpBars();
+        }
+
+        private void tmrUpdateInGameTime_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateExpBars()
+        {
+            float playerExpPer = player.Level / (float)player.MaxLevel;
+
+            const int MAX_EXPBAR_WIDTH = 226;
+            lblPlayerExpFull.Width = (int)(MAX_EXPBAR_WIDTH * playerExpPer);
+
+            lblPlayerExpFull.Text = player.Level.ToString();
+        }
+
+        private void tmrPlayerMove_Tick(object sender, EventArgs e)
+        {
+            // check to see if player is alive
+            if (player.Health <= 0)
+            {
+                if (loseScreen != null)
+                {
+                    picPlayer.BackgroundImage = null;
+                    loseScreen.Show();
+                    loseScreen = null;
+                    this.Hide();
+                }
+
+
+            }
+
+            else
+            {
+                // move player
+                player.Move();
+
+                // check collision with walls
+                if (HitAWall(player))
+                {
+                    player.MoveBack();
+                }
+
+                // check collision with enemies
+                /*if (HitAChar(player, enemy1))
+                {
+                    if (enemy1.Visible == true)
+                    {
+                        Fight(enemy1);
+                        enemy1.Visible = false;
+                    }
+
+
+                }
+                else if (HitAChar(player, enemy2))
+                {
+                    if (enemy2.Visible == true)
+                    {
+                        Fight(enemy2);
+                        enemy2.Visible = false;
+                    }
+                }
+
+                else if (HitAChar(player, enemy3))
+                {
+                    if (enemy3.Visible == true)
+                    {
+                        Fight(enemy3);
+                        enemy3.Visible = false;
+                    }
+                }*/
+
+
+
+                // update player's picture box
+                picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+            }
+        }
+
+        private void lblInGameTime_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
