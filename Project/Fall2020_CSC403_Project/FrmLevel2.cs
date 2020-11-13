@@ -66,16 +66,17 @@ namespace Fall2020_CSC403_Project
             const int NUM_WALLS = 11;
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Normal");
-            //enemy1 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Posion");
-            //enemy2 = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Fire");
-            //enemy3 = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Fire");
+            
+            this.enemy1 = new Enemy(CreatePosition(L2enemy1), CreateCollider(L2enemy1, PADDING), "Fire");
+            this.enemy2 = new Enemy(CreatePosition(L2enemy2), CreateCollider(L2enemy2, PADDING), "Water");
+            this.enemy3 = new Enemy(CreatePosition(L2enemy3), CreateCollider(L2enemy3, PADDING), "Earth");
 
             //NPCAlmondBoi = new NPC(CreatePosition(picAlmondboi), CreateCollider(picAlmondboi, PADDING));
 
 
-            //enemy1.Img = picEnemyPoisonPacket.BackgroundImage;
-            //enemy2.Img = picEnemyCheeto.BackgroundImage;
-            //enemy3.Img = picEnemyCheeto.BackgroundImage;
+            enemy1.Img = L2enemy1.BackgroundImage;
+            enemy2.Img = L2enemy2.BackgroundImage;
+            enemy3.Img = L2enemy3.BackgroundImage;
 
 
             //NPCAlmondBoi.Img = picAlmondboi.BackgroundImage;
@@ -84,7 +85,7 @@ namespace Fall2020_CSC403_Project
             //enemyPoisonPacket.Color = Color.Green;
             //enemyCheeto.Color = Color.FromArgb(255, 245, 161);
 
-            //walls = new Character[NUM_WALLS];
+            walls = new Character[NUM_WALLS];
             for (int w = 0; w < NUM_WALLS; w++)
             {
                 PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
@@ -210,39 +211,39 @@ namespace Fall2020_CSC403_Project
                 player.Move();
 
                 // check collision with walls
-                //if (HitAWall(player))
-                //{
-                 //   player.MoveBack();
-                //}
+                if (HitAWall(player))
+                {
+                    player.MoveBack();
+                }
 
                 // check collision with enemies
-                /*if (HitAChar(player, enemy1))
+                if (HitAChar(player, enemy1))
                 {
-                    if (enemy1.Visible == true)
+                    if (L2enemy1.Visible == true)
                     {
                         Fight(enemy1);
-                        enemy1.Visible = false;
+                        L2enemy1.Visible = false;
                     }
 
 
                 }
                 else if (HitAChar(player, enemy2))
                 {
-                    if (enemy2.Visible == true)
+                    if (L2enemy2.Visible == true)
                     {
                         Fight(enemy2);
-                        enemy2.Visible = false;
+                        L2enemy2.Visible = false;
                     }
                 }
 
                 else if (HitAChar(player, enemy3))
                 {
-                    if (enemy3.Visible == true)
+                    if (L2enemy3.Visible == true)
                     {
                         Fight(enemy3);
-                        enemy3.Visible = false;
+                        L2enemy3.Visible = false;
                     }
-                }*/
+                }
 
 
 
@@ -252,6 +253,16 @@ namespace Fall2020_CSC403_Project
         }
 
         private void lblInGameTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmLevel2_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void L2enemy1_Click(object sender, EventArgs e)
         {
 
         }
