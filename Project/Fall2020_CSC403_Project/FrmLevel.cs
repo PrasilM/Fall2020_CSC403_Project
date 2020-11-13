@@ -14,6 +14,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyCheeto;
         private Lose loseScreen;
         private userSel userSelection;
+        private Enemy Enemy3;
 
     private NPC NPCAlmondBoi;
 
@@ -41,17 +42,22 @@ namespace Fall2020_CSC403_Project {
       player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Normal");
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Posion");
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Fire");
-      NPCAlmondBoi = new NPC(CreatePosition(picAlmondboi), CreateCollider(picAlmondboi, PADDING));
+            this.Enemy3 = new Enemy(CreatePosition(L1enemy3), CreateCollider(L1enemy3, PADDING), "Earth");
+
+
+            NPCAlmondBoi = new NPC(CreatePosition(picAlmondboi), CreateCollider(picAlmondboi, PADDING));
 
     
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+            Enemy3.Img = L1enemy3.BackgroundImage;
 
       NPCAlmondBoi.Img = picAlmondboi.BackgroundImage;
 
 
       enemyPoisonPacket.Color = Color.Green;
       enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+            Enemy3.Color = Color.Blue;
 
       walls = new Character[NUM_WALLS];
       for (int w = 0; w < NUM_WALLS; w++) {
@@ -111,12 +117,12 @@ namespace Fall2020_CSC403_Project {
                 {
                     player.MoveBack();
                 }
-                if(HitTheExit(player))
+                /*if(HitTheExit(player))
                 {
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
                     Application.Run(new hubLevel());
-                }
+                }*/
 
                 // check collision with enemies
                 if (HitAChar(player, enemyPoisonPacket))
@@ -135,6 +141,15 @@ namespace Fall2020_CSC403_Project {
                     {
                         Fight(enemyCheeto);
                         picEnemyCheeto.Visible = false;
+                    }
+                }
+
+                if(HitAChar(player, Enemy3))
+                {
+                    if(L1enemy3.Visible == true)
+                    {
+                        Fight(Enemy3);
+                        L1enemy3.Visible = false;
                     }
                 }
 
@@ -161,13 +176,13 @@ namespace Fall2020_CSC403_Project {
       }
       return hitAWall;
     }
-    private bool HitTheExit(Character c)
+   /* private bool HitTheExit(Character c)
         {
             bool hitTheExit = false;
             if (c.Collider.Intersects(exit.Collider))
                 hitTheExit = true;
             return hitTheExit;
-        }
+        }*/
 
     private bool HitAChar(Character you, Character other) {
       return you.Collider.Intersects(other.Collider);
@@ -258,7 +273,17 @@ namespace Fall2020_CSC403_Project {
         {
 
         }
-  }
+
+        private void picWall11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void L1enemy3_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 
 
 }

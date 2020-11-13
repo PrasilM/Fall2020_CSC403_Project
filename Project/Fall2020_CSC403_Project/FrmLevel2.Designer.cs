@@ -46,6 +46,9 @@
             this.lblInGameTime = new System.Windows.Forms.Label();
             this.lblPlayerExpFull = new System.Windows.Forms.Label();
             this.labelplayerexp = new System.Windows.Forms.Label();
+            this.L2enemy1 = new System.Windows.Forms.PictureBox();
+            this.L2enemy2 = new System.Windows.Forms.PictureBox();
+            this.L2enemy3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picRaidIt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
@@ -58,12 +61,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L2enemy1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L2enemy2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L2enemy3)).BeginInit();
             this.SuspendLayout();
             // 
             // picRaidIt
             // 
             this.picRaidIt.BackColor = System.Drawing.Color.Transparent;
-            this.picRaidIt.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.NPC_raidIt;
             this.picRaidIt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picRaidIt.Location = new System.Drawing.Point(200, 990);
             this.picRaidIt.Margin = new System.Windows.Forms.Padding(4);
@@ -230,12 +235,49 @@
             this.labelplayerexp.TabIndex = 20;
             this.labelplayerexp.Text = "Player EXP";
             // 
+            // L2enemy1
+            // 
+            this.L2enemy1.BackColor = System.Drawing.Color.Transparent;
+            this.L2enemy1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources._636252777098624896;
+            this.L2enemy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.L2enemy1.Location = new System.Drawing.Point(319, 131);
+            this.L2enemy1.Name = "L2enemy1";
+            this.L2enemy1.Size = new System.Drawing.Size(100, 159);
+            this.L2enemy1.TabIndex = 21;
+            this.L2enemy1.TabStop = false;
+            this.L2enemy1.Click += new System.EventHandler(this.L2enemy1_Click);
+            // 
+            // L2enemy2
+            // 
+            this.L2enemy2.BackColor = System.Drawing.Color.Transparent;
+            this.L2enemy2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.grape_packet;
+            this.L2enemy2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.L2enemy2.Location = new System.Drawing.Point(1371, 133);
+            this.L2enemy2.Name = "L2enemy2";
+            this.L2enemy2.Size = new System.Drawing.Size(106, 157);
+            this.L2enemy2.TabIndex = 22;
+            this.L2enemy2.TabStop = false;
+            // 
+            // L2enemy3
+            // 
+            this.L2enemy3.BackColor = System.Drawing.Color.Transparent;
+            this.L2enemy3.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Crazy_Squares;
+            this.L2enemy3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.L2enemy3.Location = new System.Drawing.Point(470, 587);
+            this.L2enemy3.Name = "L2enemy3";
+            this.L2enemy3.Size = new System.Drawing.Size(108, 135);
+            this.L2enemy3.TabIndex = 23;
+            this.L2enemy3.TabStop = false;
+            // 
             // FrmLevel2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.grassTexture;
             this.ClientSize = new System.Drawing.Size(1568, 894);
+            this.Controls.Add(this.L2enemy3);
+            this.Controls.Add(this.L2enemy2);
+            this.Controls.Add(this.L2enemy1);
             this.Controls.Add(this.labelplayerexp);
             this.Controls.Add(this.lblPlayerExpFull);
             this.Controls.Add(this.lblInGameTime);
@@ -253,7 +295,7 @@
             this.Controls.Add(this.picRaidIt);
             this.Name = "FrmLevel2";
             this.Text = "FrmLevel2";
-            //this.Load += new System.EventHandler(this.FrmLevel2_Load);
+            this.Load += new System.EventHandler(this.FrmLevel2_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.picRaidIt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
@@ -266,6 +308,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L2enemy1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L2enemy2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L2enemy3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +335,8 @@
         private System.Windows.Forms.Label lblInGameTime;
         private System.Windows.Forms.Label lblPlayerExpFull;
         private System.Windows.Forms.Label labelplayerexp;
+        public System.Windows.Forms.PictureBox L2enemy1;
+        public System.Windows.Forms.PictureBox L2enemy2;
+        public System.Windows.Forms.PictureBox L2enemy3;
     }
 }
