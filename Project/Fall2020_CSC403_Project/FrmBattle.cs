@@ -96,7 +96,7 @@ namespace Fall2020_CSC403_Project
             lblEnemyHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * enemyHealthPer);
 
             lblPlayerHealthFull.Text = player.Health.ToString();
-            lblEnemyHealthFull.Text = enemy.Health.ToString();
+            lblEnemyHealthFull.Text = enemy.EnemyHealth.ToString();
         }
 
 
@@ -253,17 +253,17 @@ namespace Fall2020_CSC403_Project
             else
             {
                 player.OnAttack(-4, player, enemy);
-                if (enemy.Health > 0)
+                if (enemy.EnemyHealth > 0)
                 {
                     enemy.OnAttack(-2, enemy, player);
                 }
 
                 UpdateHealthBars();
                 UpdateArmorBars();
-                if (player.Health <= 0 || enemy.Health <= 0)
+                if (player.Health <= 0 || enemy.EnemyHealth <= 0)
                 {
                     instance = null;
-                    if (enemy.Health <= 0)
+                    if (enemy.EnemyHealth <= 0)
                     {
                         Random r = new Random();
                         player.AlterExp(r.Next(2, 5));
@@ -278,7 +278,7 @@ namespace Fall2020_CSC403_Project
 
         private void EnemyDamage(int amount)
         {
-            if (enemy.EnemyArmor != 0)
+            if (enemy.Armor != 0)
             {
                 enemy.AlterArmor(amount);
             }
@@ -341,7 +341,7 @@ namespace Fall2020_CSC403_Project
 
             }
 
-            if (enemy.Health > 0)
+            if (enemy.EnemyHealth > 0)
             {
                 enemy.OnAttack(-2, enemy, player);
             }
