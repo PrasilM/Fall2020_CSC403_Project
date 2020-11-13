@@ -43,6 +43,7 @@ namespace Fall2020_CSC403_Project
 
             // Observer pattern
             enemy.AttackEvent += PlayerDamage;
+            //player.ArmorEvent+=
             player.AttackEvent += EnemyDamage;
             player.HealEvent += PlayerHealing;
 
@@ -53,6 +54,9 @@ namespace Fall2020_CSC403_Project
 
             // show health
             UpdateHealthBars();
+
+            //show Armor
+            UpdateArmorBars();
         }
 
         public void SetupForBossBattle()
@@ -96,17 +100,18 @@ namespace Fall2020_CSC403_Project
             lblEnemyHealthFull.Text = enemy.Health.ToString();
         }
 
-
-
         private void UpdateArmorBars()
         {
             float playerArmorPer = player.Armor / (float)player.MaxArmor;
+           // float enemyArmorPer = enemy.Armor / (float)enemy.MaxArmor;
+
             const int MAX_ARMORBAR_WIDTH = 226;
-            //lblPlayerArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
+            lblPlayerArmorBar.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
+            //lblEnemyArmorBar.Width = (int)(MAX_ARMORBAR_WIDTH * enemyArmorPer);
 
-            //lblPlayerArmorFull.Text = player.Armor.ToString();
+            lblPlayerArmorBar.Text = player.Armor.ToString();
+            //lblEnemyHealthFull.Text = enemy.Health.ToString();
         }
-
 
         // updates elemental types
         private void updateElements()
@@ -250,6 +255,7 @@ namespace Fall2020_CSC403_Project
                 }
 
                 UpdateHealthBars();
+                UpdateArmorBars();
                 if (player.Health <= 0 || enemy.Health <= 0)
                 {
                     instance = null;
@@ -370,6 +376,11 @@ namespace Fall2020_CSC403_Project
         }
 
         private void picEnemy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPlayerHealthFull_Click(object sender, EventArgs e)
         {
 
         }

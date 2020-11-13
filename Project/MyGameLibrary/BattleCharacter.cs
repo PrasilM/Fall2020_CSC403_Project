@@ -35,6 +35,8 @@ namespace Fall2020_CSC403_Project.code
 
         public event Action<int> LevelEvent;
 
+        public event Action<int> ArmorEvent;
+
         public double elementalBattleCalculation(BattleCharacter atr, BattleCharacter def)
         {
 
@@ -182,8 +184,9 @@ namespace Fall2020_CSC403_Project.code
 
         public void AlterHealth(int amount)
         {
-            //EnemyHealth += amount;
             Health += amount;
+
+
         }
         /// <summary>
         /// When there is an armor pick up, the amount will be added on just like another health bar that will depleate
@@ -193,7 +196,11 @@ namespace Fall2020_CSC403_Project.code
         public void AdditionalArmor(int amount)
         {
             Armor += amount;
-           // EnemyArmor += amount;
+        }
+
+        public void AlterArmor(int amount)
+        {
+            Armor += amount;
         }
 
         public void AdditionalStrength(int amount)
