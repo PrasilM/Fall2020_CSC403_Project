@@ -21,6 +21,7 @@ namespace Fall2020_CSC403_Project {
     //private Boss finalBoss;
 
     private Character[] walls;
+        private Character exit;
 
     private DateTime timeBegin;
     private FrmBattle frmBattle;

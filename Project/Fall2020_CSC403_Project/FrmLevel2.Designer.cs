@@ -229,5 +229,6 @@
         private System.Windows.Forms.PictureBox picWall9;
         private System.Windows.Forms.PictureBox picWall1;
         public System.Windows.Forms.PictureBox picPlayer;
+        private System.Windows.Forms.Label lblPlayerExpFull;
     }
 }

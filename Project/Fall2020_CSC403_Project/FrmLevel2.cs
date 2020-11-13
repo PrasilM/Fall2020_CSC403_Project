@@ -20,6 +20,7 @@ namespace Fall2020_CSC403_Project
         private Enemy enemy3;
         private Lose loseScreen;
         private Character[] walls;
+        private Character exit;
 
         private DateTime timeBegin;
         private FrmBattle frmBattle;
@@ -108,6 +109,14 @@ namespace Fall2020_CSC403_Project
             return hitAWall;
         }
 
+        private bool HitTheExit(Character c)
+        {
+            bool hitTheExit = false;
+            if (c.Collider.Intersects(exit.Collider))
+                hitTheExit = true;
+            return hitTheExit;
+        }
+
         private bool HitAChar(Character you, Character other)
         {
             return you.Collider.Intersects(other.Collider);
@@ -121,6 +130,16 @@ namespace Fall2020_CSC403_Project
             frmBattle.Show();
 
             UpdateExpBars();
+        }
+
+        private void UpdateExpBars()
+        {
+            float playerExpPer = player.Level / (float)player.MaxLevel;
+
+            const int MAX_EXPBAR_WIDTH = 226;
+            lblPlayerExpFull.Width = (int)(MAX_EXPBAR_WIDTH * playerExpPer);
+
+            lblPlayerExpFull.Text = player.Level.ToString();
         }
     }
 }
