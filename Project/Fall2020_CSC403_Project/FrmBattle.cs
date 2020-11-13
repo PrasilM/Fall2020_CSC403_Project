@@ -43,7 +43,6 @@ namespace Fall2020_CSC403_Project
 
             // Observer pattern
             enemy.AttackEvent += PlayerDamage;
-            //player.ArmorEvent+=
             player.AttackEvent += EnemyDamage;
             player.HealEvent += PlayerHealing;
 
@@ -55,7 +54,7 @@ namespace Fall2020_CSC403_Project
             // show health
             UpdateHealthBars();
 
-            //show Armor
+            //show armor
             UpdateArmorBars();
         }
 
@@ -100,18 +99,17 @@ namespace Fall2020_CSC403_Project
             lblEnemyHealthFull.Text = enemy.Health.ToString();
         }
 
+
+
         private void UpdateArmorBars()
         {
             float playerArmorPer = player.Armor / (float)player.MaxArmor;
-           // float enemyArmorPer = enemy.Armor / (float)enemy.MaxArmor;
-
             const int MAX_ARMORBAR_WIDTH = 226;
             lblPlayerArmorBar.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
-            //lblEnemyArmorBar.Width = (int)(MAX_ARMORBAR_WIDTH * enemyArmorPer);
 
             lblPlayerArmorBar.Text = player.Armor.ToString();
-            //lblEnemyHealthFull.Text = enemy.Health.ToString();
         }
+
 
         // updates elemental types
         private void updateElements()
@@ -198,6 +196,7 @@ namespace Fall2020_CSC403_Project
                     }
 
                     UpdateHealthBars();
+                    UpdateArmorBars();
 
                 }
 
@@ -220,6 +219,7 @@ namespace Fall2020_CSC403_Project
                     }
 
                     UpdateHealthBars();
+                    UpdateArmorBars();
 
                 }
 
@@ -237,6 +237,7 @@ namespace Fall2020_CSC403_Project
                     }
 
                     UpdateHealthBars();
+                    UpdateArmorBars();
                 }
 
                 else
@@ -279,7 +280,19 @@ namespace Fall2020_CSC403_Project
 
         private void PlayerDamage(int amount)
         {
-            player.AlterHealth(amount);
+            if (player.Armor <= 0)
+            {
+                player.AlterHealth(amount);
+            }
+            else if(amount >player.Armor){
+                int extra_amount = amount - player.Armor;
+                player.AlterArmor(amount);
+                player.AlterHealth(extra_amount);
+            }
+            else
+            {
+                player.AlterArmor(amount);
+            }
         }
 
         private void PlayerHealing(int amount)
@@ -366,6 +379,7 @@ namespace Fall2020_CSC403_Project
             {
                 food.Show();
                 UpdateHealthBars();
+                UpdateArmorBars();
 
             }
             else
@@ -376,11 +390,6 @@ namespace Fall2020_CSC403_Project
         }
 
         private void picEnemy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPlayerHealthFull_Click(object sender, EventArgs e)
         {
 
         }

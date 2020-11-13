@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.btnAttack = new System.Windows.Forms.Button();
             this.lblPlayerHealthFull = new System.Windows.Forms.Label();
+            this.lblPlayerArmorBar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblEnemyHealthFull = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.enemyElementStat = new System.Windows.Forms.TextBox();
             this.Equipment = new System.Windows.Forms.Button();
             this.Food = new System.Windows.Forms.Button();
-            this.lblPlayerArmorBar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
@@ -73,6 +73,17 @@
             this.lblPlayerHealthFull.Name = "lblPlayerHealthFull";
             this.lblPlayerHealthFull.Size = new System.Drawing.Size(301, 25);
             this.lblPlayerHealthFull.TabIndex = 3;
+            // 
+            // lblPlayerArmorBar
+            // 
+            this.lblPlayerArmorBar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblPlayerArmorBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerArmorBar.ForeColor = System.Drawing.Color.White;
+            this.lblPlayerArmorBar.Location = new System.Drawing.Point(95, 29);
+            this.lblPlayerArmorBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlayerArmorBar.Name = "lblPlayerArmorBar";
+            this.lblPlayerArmorBar.Size = new System.Drawing.Size(301, 25);
+            this.lblPlayerArmorBar.TabIndex = 16;
             // 
             // label1
             // 
@@ -233,17 +244,6 @@
             this.Food.Text = "Food";
             this.Food.UseVisualStyleBackColor = true;
             this.Food.Click += new System.EventHandler(this.Food_Click);
-            // 
-            // lblPlayerArmorBar
-            // 
-            this.lblPlayerArmorBar.BackColor = System.Drawing.Color.BlueViolet;
-            this.lblPlayerArmorBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerArmorBar.ForeColor = System.Drawing.Color.White;
-            this.lblPlayerArmorBar.Location = new System.Drawing.Point(95, 28);
-            this.lblPlayerArmorBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPlayerArmorBar.Name = "lblPlayerArmorBar";
-            this.lblPlayerArmorBar.Size = new System.Drawing.Size(301, 25);
-            this.lblPlayerArmorBar.TabIndex = 16;
             // 
             // FrmBattle
             // 
