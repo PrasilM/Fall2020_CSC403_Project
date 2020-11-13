@@ -14,6 +14,8 @@ namespace Fall2020_CSC403_Project
         private Player player;
         private readonly FrmEquipment equipment;
         private readonly FrmFood food;
+        private int bossStage = 0;
+        private bool isBossBattle = false;
 
         private FrmBattle()
         {
@@ -59,6 +61,9 @@ namespace Fall2020_CSC403_Project
             simpleSound.Play();
 
             tmrFinalBattle.Enabled = true;
+            bossStage = 1;
+            isBossBattle = true;
+
         }
 
         public static FrmBattle GetInstance(Enemy enemy)
@@ -161,24 +166,87 @@ namespace Fall2020_CSC403_Project
 
         private void btnAttack_Click(object sender, EventArgs e)
         {
-            player.OnAttack(-4, player, enemy);
-            if (enemy.Health > 0)
+            if(isBossBattle == true)
             {
-                enemy.OnAttack(-2, enemy, player);
-            }
-
-            UpdateHealthBars();
-            if (player.Health <= 0 || enemy.Health <= 0)
-            {
-                instance = null;
-                if (enemy.Health <= 0)
+                if(bossStage == 1)
                 {
-                    Random r = new Random();
-                    player.AlterExp(r.Next(2, 5));
+                    player.OnAttack(-4, player, enemy);
+                    if (enemy.Health > 0)
+                    {
+                        enemy.OnAttack(-2, enemy, player);
+                    }
+
+                    else
+                    {
+                        bossStage = 2;
+                    }
+
+                    UpdateHealthBars();
 
                 }
-                Close();
+
+                else if(bossStage == 2)
+                {
+                    player.OnAttack(-4, player, enemy);
+                    if (enemy.Health > 0)
+                    {
+                        enemy.OnAttack(-2, enemy, player);
+                    }
+
+                    else
+                    {
+                        bossStage = 3;
+                    }    
+
+                    UpdateHealthBars();
+
+                }
+
+                else if(bossStage == 3)
+                {
+                    player.OnAttack(-4, player, enemy);
+                    if (enemy.Health > 0)
+                    {
+                        enemy.OnAttack(-2, enemy, player);
+                    }
+
+                    else
+                    {
+                        bossStage = 0;
+                    }
+
+                    UpdateHealthBars();
+                }
+
+                else
+                {
+                    isBossBattle = false;
+                    Close();
+                }
             }
+
+            else
+            {
+                player.OnAttack(-4, player, enemy);
+                if (enemy.Health > 0)
+                {
+                    enemy.OnAttack(-2, enemy, player);
+                }
+
+                UpdateHealthBars();
+                if (player.Health <= 0 || enemy.Health <= 0)
+                {
+                    instance = null;
+                    if (enemy.Health <= 0)
+                    {
+                        Random r = new Random();
+                        player.AlterExp(r.Next(2, 5));
+
+                    }
+                    Close();
+                }
+            }
+            
         }
 
 
