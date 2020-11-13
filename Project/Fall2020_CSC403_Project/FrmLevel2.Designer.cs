@@ -166,6 +166,7 @@
             this.picWall9.Size = new System.Drawing.Size(134, 352);
             this.picWall9.TabIndex = 14;
             this.picWall9.TabStop = false;
+            this.picWall9.Click += new System.EventHandler(this.picWall9_Click);
             // 
             // picWall1
             // 
@@ -295,7 +296,7 @@
             this.Controls.Add(this.picRaidIt);
             this.Name = "FrmLevel2";
             this.Text = "FrmLevel2";
-            this.Load += new System.EventHandler(this.FrmLevel2_Load_1);
+            this.Load += new System.EventHandler(this.FrmLevel2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picRaidIt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
