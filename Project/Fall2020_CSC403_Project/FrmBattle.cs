@@ -184,6 +184,7 @@ namespace Fall2020_CSC403_Project
                         enemy.MaxHealth = 30;
                         enemy.Health = enemy.MaxHealth;
                         enemy.strength = 3;
+                        //picEnemy.BackgroundImage = System.Drawing.Image();
                         
                     }
 
