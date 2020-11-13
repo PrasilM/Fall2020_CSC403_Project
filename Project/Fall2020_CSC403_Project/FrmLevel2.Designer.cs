@@ -55,6 +55,7 @@
             // picRaidIt
             // 
             this.picRaidIt.BackColor = System.Drawing.Color.Transparent;
+            this.picRaidIt.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.
             this.picRaidIt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picRaidIt.Location = new System.Drawing.Point(1117, 665);
             this.picRaidIt.Margin = new System.Windows.Forms.Padding(4);
