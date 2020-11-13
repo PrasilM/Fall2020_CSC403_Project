@@ -10,15 +10,17 @@ namespace Fall2020_CSC403_Project.code
 {
     public class BattleCharacter : Character
     {
-        public int Health { get; protected set; }
+        public int Health { get; set; }
         public int Armor { get; private set; }
-        public int MaxHealth { get; protected set; }
+        public int MaxHealth { get; set; }
         public int MaxArmor { get; private set; }
 
         public int Level { get; private set; }
 
         public int MaxLevel { get; protected set; }
         public float strength { get; protected set; }
+        public int[] Inventory {get; set; }
+        public int[] EquippedItems { get; set; }
 
         // Adding new combat type for enemies/player
         public String elementalType { get; set; }
@@ -201,6 +203,11 @@ namespace Fall2020_CSC403_Project.code
         public void AlterExp(int amount)
         {
             Level += amount;
+        }
+
+        public void Equip(int itemNum)
+        {
+
         }
 
     }

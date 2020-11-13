@@ -11,6 +11,7 @@ namespace Fall2020_CSC403_Project.code {
 
     // Image for player
     public Image Img { get; set; }
+    public int levelProgress = 0;
 
     public Player(Vector2 initPos, Collider collider, String eleType) : base(initPos, collider) {
 
