@@ -11,7 +11,6 @@ namespace Fall2020_CSC403_Project {
     private Player player;
 
     private Enemy enemyPoisonPacket;
-    private Enemy bossKoolaid;
     private Enemy enemyCheeto;
         private Lose loseScreen;
         private userSel userSelection;
@@ -179,10 +178,6 @@ namespace Fall2020_CSC403_Project {
       player.MoveBack();
       frmBattle = FrmBattle.GetInstance(enemy);
       frmBattle.Show();
-
-      if (enemy == bossKoolaid) {
-        frmBattle.SetupForBossBattle();
-      }
 
             // setup for final boss
             /*if(enemy == finalBoss)

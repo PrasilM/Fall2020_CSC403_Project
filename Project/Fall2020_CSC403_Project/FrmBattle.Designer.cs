@@ -177,7 +177,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Green;
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox1.Location = new System.Drawing.Point(12, 492);
@@ -282,8 +282,8 @@
         private System.Windows.Forms.Timer tmrFinalBattle;
         private System.Windows.Forms.Button flee;
         public System.Windows.Forms.TextBox ElementalStatus;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
         public System.Windows.Forms.TextBox enemyElementStat;
         private System.Windows.Forms.Button Equipment;
         private System.Windows.Forms.Button Food;

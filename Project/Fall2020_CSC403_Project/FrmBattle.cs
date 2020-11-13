@@ -32,6 +32,10 @@ namespace Fall2020_CSC403_Project
             picEnemy.BackgroundImage = enemy.Img;
             picEnemy.Refresh();
             BackColor = enemy.Color;
+            textBox1.BackColor = enemy.Color;
+            textBox2.BackColor = enemy.Color;
+            ElementalStatus.BackColor = enemy.Color;
+            enemyElementStat.BackColor = enemy.Color;
             picBossBattle.Visible = false;
 
             // Update elemental types for both enemy and player
