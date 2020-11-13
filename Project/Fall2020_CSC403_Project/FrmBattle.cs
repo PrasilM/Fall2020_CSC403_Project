@@ -183,6 +183,7 @@ namespace Fall2020_CSC403_Project
                         updateElements();
                         enemy.MaxHealth = 30;
                         enemy.Health = enemy.MaxHealth;
+                        enemy.strength = 3;
                         
                     }
 
@@ -205,6 +206,7 @@ namespace Fall2020_CSC403_Project
                         updateElements();
                         enemy.MaxHealth = 40;
                         enemy.Health = enemy.MaxHealth;
+                        enemy.strength = 4;
                     }    
 
                     UpdateHealthBars();

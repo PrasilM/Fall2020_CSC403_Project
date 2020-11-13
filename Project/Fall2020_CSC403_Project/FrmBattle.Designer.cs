@@ -272,7 +272,7 @@
         #endregion
 
         public System.Windows.Forms.PictureBox picPlayer;
-        private System.Windows.Forms.PictureBox picEnemy;
+        public System.Windows.Forms.PictureBox picEnemy;
         private System.Windows.Forms.Button btnAttack;
         private System.Windows.Forms.Label lblPlayerHealthFull;
         private System.Windows.Forms.Label label1;
