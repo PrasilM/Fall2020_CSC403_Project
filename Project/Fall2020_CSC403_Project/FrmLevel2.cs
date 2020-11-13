@@ -20,6 +20,7 @@ namespace Fall2020_CSC403_Project
         private Enemy enemy3;
         private Lose loseScreen;
         private Character[] walls;
+        private Character exit;
 
         private DateTime timeBegin;
         private FrmBattle frmBattle;
@@ -144,7 +145,15 @@ namespace Fall2020_CSC403_Project
                         break;
                 }
             }
+        }
 
+        
+            private bool HitTheExit(Character c)
+        {
+            bool hitTheExit = false;
+            if (c.Collider.Intersects(exit.Collider))
+                hitTheExit = true;
+            return hitTheExit;
         }
 
         private bool HitAChar(Character you, Character other)
