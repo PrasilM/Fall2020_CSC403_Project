@@ -39,18 +39,17 @@ namespace Fall2020_CSC403_Project {
       const int NUM_WALLS = 13;
 
       player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Normal");
-      bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING), "Water");
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Posion");
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Fire");
       NPCAlmondBoi = new NPC(CreatePosition(picAlmondboi), CreateCollider(picAlmondboi, PADDING));
 
-      bossKoolaid.Img = picBossKoolAid.BackgroundImage;
+    
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
 
       NPCAlmondBoi.Img = picAlmondboi.BackgroundImage;
 
-      bossKoolaid.Color = Color.Red;
+
       enemyPoisonPacket.Color = Color.Green;
       enemyCheeto.Color = Color.FromArgb(255, 245, 161);
 
@@ -132,14 +131,7 @@ namespace Fall2020_CSC403_Project {
                         picEnemyCheeto.Visible = false;
                     }
                 }
-                if (HitAChar(player, bossKoolaid))
-                {
-                    if(picBossKoolAid.Visible == true)
-                    {
-                        Fight(bossKoolaid);
-                        picBossKoolAid.Visible = false;
-                    }
-                }
+
 
 
                 // update player's picture box
@@ -253,6 +245,10 @@ namespace Fall2020_CSC403_Project {
             lblPlayerExpFull.Text = player.Level.ToString();
         }
 
+        private void picBossKoolAid_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
