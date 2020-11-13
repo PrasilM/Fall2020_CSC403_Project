@@ -82,6 +82,13 @@ namespace Fall2020_CSC403_Project.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap cobblestoneFloor {
+            get {
+                object obj = ResourceManager.GetObject("cobblestoneFloor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.IO.UnmanagedMemoryStream final_battle {
             get {
                 return ResourceManager.GetStream("final_battle", resourceCulture);
@@ -102,6 +109,13 @@ namespace Fall2020_CSC403_Project.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap grass_wall {
+            get {
+                object obj = ResourceManager.GetObject("grass_wall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap bossFloor {
             get {
                 object obj = ResourceManager.GetObject("bossFloor", resourceCulture);
@@ -116,9 +130,9 @@ namespace Fall2020_CSC403_Project.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap grass_wall {
+        internal static System.Drawing.Bitmap grassHedge {
             get {
-                object obj = ResourceManager.GetObject("grass_wall", resourceCulture);
+                object obj = ResourceManager.GetObject("grassHedge", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -200,9 +214,9 @@ namespace Fall2020_CSC403_Project.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap grassHedge {
+        internal static System.Drawing.Bitmap cobblestoneBricks {
             get {
-                object obj = ResourceManager.GetObject("grassHedge", resourceCulture);
+                object obj = ResourceManager.GetObject("cobblestoneBricks", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -210,6 +224,20 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap NPC_cashewBro {
             get {
                 object obj = ResourceManager.GetObject("NPC_cashewBro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap NPC_raidIt {
+            get {
+                object obj = ResourceManager.GetObject("NPC_raidIt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap NPC_almondBoi {
+            get {
+                object obj = ResourceManager.GetObject("NPC_almondBoi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

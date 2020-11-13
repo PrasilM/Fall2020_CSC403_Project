@@ -116,6 +116,12 @@
     <EmbeddedResource Include="FrmLevel.resx">
       <DependentUpon>FrmLevel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLevel2.resx">
+      <DependentUpon>FrmLevel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hubLevel.resx">
+      <DependentUpon>hubLevel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lose.resx">
       <DependentUpon>Lose.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,8 +191,13 @@
     <None Include="data\Characters\Crazy_Squares.png" />
     <None Include="data\Characters\Kool-Aid_Man.png" />
     <Content Include="data\cloak.png" />
+    <None Include="data\cobblestoneFloor.jpg" />
+    <None Include="data\cobblestoneBricks.jpg" />
     <Content Include="data\flipflop.jpg" />
     <None Include="data\gameOver.jpg" />
+    <None Include="data\grassTexture.png" />
+    <None Include="data\grass_wall.png" />
+    <None Include="data\grassHedge.jpg" />
     <Content Include="data\Save Data\Inventory Contents.txt" />
     <Content Include="data\Save Data\Level Progress.txt" />
     <Content Include="data\Save Data\Player Status.txt" />
