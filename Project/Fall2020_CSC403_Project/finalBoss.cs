@@ -214,5 +214,43 @@ namespace Fall2020_CSC403_Project
 
             lblPlayerExpFull.Text = player.Level.ToString();
         }
+        private void finalBoss_KeyUp(object sender, KeyEventArgs e)
+        {
+            player.ResetMoveSpeed();
+        }
+        private void finalBoss_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (player.Health <= 0)
+            {
+
+            }
+
+            else
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Left:
+                        player.GoLeft();
+                        break;
+
+                    case Keys.Right:
+                        player.GoRight();
+                        break;
+
+                    case Keys.Up:
+                        player.GoUp();
+                        break;
+
+                    case Keys.Down:
+                        player.GoDown();
+                        break;
+
+                    default:
+                        player.ResetMoveSpeed();
+                        break;
+                }
+            }
+
+        }
     }
 }

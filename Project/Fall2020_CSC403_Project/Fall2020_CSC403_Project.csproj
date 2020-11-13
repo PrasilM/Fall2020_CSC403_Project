@@ -187,6 +187,9 @@
     <Content Include="data\cloak.png" />
     <Content Include="data\flipflop.jpg" />
     <None Include="data\gameOver.jpg" />
+    <Content Include="data\Save Data\Inventory Contents.txt" />
+    <Content Include="data\Save Data\Level Progress.txt" />
+    <Content Include="data\Save Data\Player Status.txt" />
     <Content Include="data\sword.jpg" />
     <Content Include="data\wand.png" />
   </ItemGroup>

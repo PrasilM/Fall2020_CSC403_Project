@@ -244,9 +244,14 @@
             this.Controls.Add(this.picWall2);
             this.Controls.Add(this.picWall0);
             this.Controls.Add(this.picWall1);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "finalBoss";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "finalBoss";
             this.Load += new System.EventHandler(this.finalBoss_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.finalBoss_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.finalBoss_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
