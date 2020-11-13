@@ -221,7 +221,7 @@ namespace Fall2020_CSC403_Project
                 }
                 if (HitTheExit(player))
                 {
-                    player.GoLeft();
+                    player.GoDown();
                     level = new finalBoss();
                     level.Show();
                 }
