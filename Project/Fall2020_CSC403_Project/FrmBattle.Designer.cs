@@ -45,6 +45,7 @@
             this.enemyElementStat = new System.Windows.Forms.TextBox();
             this.Equipment = new System.Windows.Forms.Button();
             this.Food = new System.Windows.Forms.Button();
+            this.lblPlayerArmorBar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
@@ -233,6 +234,17 @@
             this.Food.UseVisualStyleBackColor = true;
             this.Food.Click += new System.EventHandler(this.Food_Click);
             // 
+            // lblPlayerArmorBar
+            // 
+            this.lblPlayerArmorBar.BackColor = System.Drawing.Color.BlueViolet;
+            this.lblPlayerArmorBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerArmorBar.ForeColor = System.Drawing.Color.White;
+            this.lblPlayerArmorBar.Location = new System.Drawing.Point(95, 28);
+            this.lblPlayerArmorBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlayerArmorBar.Name = "lblPlayerArmorBar";
+            this.lblPlayerArmorBar.Size = new System.Drawing.Size(301, 25);
+            this.lblPlayerArmorBar.TabIndex = 16;
+            // 
             // FrmBattle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,6 +252,7 @@
             this.BackColor = System.Drawing.Color.Green;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1096, 742);
+            this.Controls.Add(this.lblPlayerArmorBar);
             this.Controls.Add(this.Food);
             this.Controls.Add(this.Equipment);
             this.Controls.Add(this.enemyElementStat);
@@ -287,5 +300,6 @@
         public System.Windows.Forms.TextBox enemyElementStat;
         private System.Windows.Forms.Button Equipment;
         private System.Windows.Forms.Button Food;
+        private System.Windows.Forms.Label lblPlayerArmorBar;
     }
 }
