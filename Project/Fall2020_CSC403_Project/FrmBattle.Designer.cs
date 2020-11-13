@@ -125,9 +125,9 @@
             this.lblEnemyArmorFull.BackColor = System.Drawing.Color.Red;
             this.lblEnemyArmorFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnemyArmorFull.ForeColor = System.Drawing.Color.Black;
-            this.lblEnemyArmorFull.Location = new System.Drawing.Point(688, 100);
+            this.lblEnemyArmorFull.Location = new System.Drawing.Point(900, 900);
             this.lblEnemyArmorFull.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEnemyArmorFull.Name = "lblPlayerArmorFull";
+            this.lblEnemyArmorFull.Name = "lblEnemyArmorFull";
             this.lblEnemyArmorFull.Size = new System.Drawing.Size(301, 25);
             this.lblEnemyArmorFull.TabIndex = 3;
 
