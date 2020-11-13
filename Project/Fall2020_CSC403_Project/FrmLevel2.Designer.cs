@@ -239,7 +239,7 @@
             // L2enemy1
             // 
             this.L2enemy1.BackColor = System.Drawing.Color.Transparent;
-            this.L2enemy1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources._636252777098624896;
+            this.L2enemy1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.poptarts3_7_2019_jpg_20190307050528112;
             this.L2enemy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.L2enemy1.Location = new System.Drawing.Point(319, 131);
             this.L2enemy1.Name = "L2enemy1";
@@ -297,6 +297,8 @@
             this.Name = "FrmLevel2";
             this.Text = "FrmLevel2";
             this.Load += new System.EventHandler(this.FrmLevel2_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLevel2_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLevel2_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.picRaidIt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();

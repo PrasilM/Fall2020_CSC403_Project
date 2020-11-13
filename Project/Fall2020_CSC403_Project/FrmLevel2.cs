@@ -67,7 +67,7 @@ namespace Fall2020_CSC403_Project
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Normal");
             
-            this.enemy1 = new Enemy(CreatePosition(L2enemy1), CreateCollider(L2enemy1, PADDING), "Fire");
+            this.enemy1 = new Enemy(CreatePosition(L2enemy1), CreateCollider(L2enemy1, PADDING), "Water");
             this.enemy2 = new Enemy(CreatePosition(L2enemy2), CreateCollider(L2enemy2, PADDING), "Water");
             this.enemy3 = new Enemy(CreatePosition(L2enemy3), CreateCollider(L2enemy3, PADDING), "Earth");
 
