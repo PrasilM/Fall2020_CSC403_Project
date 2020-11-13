@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project {
   public partial class FrmLevel : Form {
-    private Player player;
+    private Player player = Game.player;
 
     private Enemy enemyPoisonPacket;
     private Enemy enemyCheeto;
@@ -91,12 +91,12 @@ namespace Fall2020_CSC403_Project {
         }
 
     private void tmrPlayerMove_Tick(object sender, EventArgs e) {
-            
+            player = Game.player;
 
             // check to see if player is alive
             if (player.Health <= 0)
             {
-                if(loseScreen != null)
+                if (loseScreen != null)
                 {
                     picPlayer.BackgroundImage = null;
                     loseScreen.Show();
@@ -104,11 +104,11 @@ namespace Fall2020_CSC403_Project {
                     this.Hide();
                 }
 
-                
-            }
 
+            }
             else
             {
+
                 // move player
                 player.Move();
 
@@ -127,26 +127,26 @@ namespace Fall2020_CSC403_Project {
                 // check collision with enemies
                 if (HitAChar(player, enemyPoisonPacket))
                 {
-                    if(picEnemyPoisonPacket.Visible == true)
+                    if (picEnemyPoisonPacket.Visible == true)
                     {
                         Fight(enemyPoisonPacket);
                         picEnemyPoisonPacket.Visible = false;
                     }
 
-                    
+
                 }
                 else if (HitAChar(player, enemyCheeto))
                 {
-                    if(picEnemyCheeto.Visible == true)
+                    if (picEnemyCheeto.Visible == true)
                     {
                         Fight(enemyCheeto);
                         picEnemyCheeto.Visible = false;
                     }
                 }
 
-                if(HitAChar(player, Enemy3))
+                if (HitAChar(player, Enemy3))
                 {
-                    if(L1enemy3.Visible == true)
+                    if (L1enemy3.Visible == true)
                     {
                         Fight(Enemy3);
                         L1enemy3.Visible = false;
@@ -157,9 +157,9 @@ namespace Fall2020_CSC403_Project {
 
                 // update player's picture box
                 picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+
+
             }
-            
-      
 
       
 
