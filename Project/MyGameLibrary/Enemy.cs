@@ -5,6 +5,11 @@ namespace Fall2020_CSC403_Project.code {
     /// This is the class for an enemy
     /// </summary>
     public class Enemy : BattleCharacter {
+
+
+        public int EnemyLevelUp { get; private set; }
+        public float EnemyStrength { get; set; }
+        public int EnemyArmor { get; private set; }
         /// <summary>
         /// THis is the image for an enemy
         /// </summary>
@@ -23,17 +28,32 @@ namespace Fall2020_CSC403_Project.code {
         public Enemy(Vector2 initPos, Collider collider, string eleType) : base(initPos, collider) {
             elementalType = eleType;
         }
-        /// <summary>
-        /// Prasil: This is where i will be working on enemy level up
-        /// </summary>
 
-        private void LevelUp()
+       /// <summary>
+       /// This is the enemy level up, takes in level from battle character and increases it
+       /// </summary>
+       /// <param name="Level"></param>
+        private void LevelUp(int Level)
         {
-            /// pseudo code
-            /// enemyLevel = playerLevel+1
-            /// enemyHealth = playerHealth + 5
-            /// enemyStrength = playerStrength + 2
-            /// enemyArmor = playerArmor + 3
+            EnemyLevelUp = Level + 2;
+        }
+
+        /// <summary>
+        /// This is the enemy strength, takes in strength from battle character and increases it
+        /// </summary>
+        /// <param name="strength"></param>
+        private void Strength(int strength)
+        {
+            EnemyStrength = strength + 2;
+        }
+
+        /// <summary>
+        /// This is the enemy armor, takes in armor from battle character and increases it
+        /// </summary>
+        /// <param name="Armor"></param>
+        private void Armor(int Armor)
+        {
+            EnemyArmor = Armor + 2;
         }
     }
 }
