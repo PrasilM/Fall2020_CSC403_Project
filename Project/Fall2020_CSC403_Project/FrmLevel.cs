@@ -30,7 +30,7 @@ namespace Fall2020_CSC403_Project {
       InitializeComponent();
             loseScreen = new Lose();
             userSelection = new userSel();
-            userSelection.Show();
+            //userSelection.Show();
 
  
     }

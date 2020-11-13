@@ -63,7 +63,7 @@ namespace Fall2020_CSC403_Project
 
             NPCraidIt = new NPC(CreatePosition(picRaidIt), CreateCollider(picRaidIt, PADDING));
 
-            const int NUM_WALLS = 11;
+            const int NUM_WALLS = 10;
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Normal");
             
@@ -258,12 +258,12 @@ namespace Fall2020_CSC403_Project
 
         }
 
-        private void FrmLevel2_Load_1(object sender, EventArgs e)
+        private void L2enemy1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void L2enemy1_Click(object sender, EventArgs e)
+        private void picWall9_Click(object sender, EventArgs e)
         {
 
         }
