@@ -13,6 +13,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
         private Lose loseScreen;
+        private userSel userSelection;
 
     ///private NPC NPCAlmondBoi;
 
@@ -26,6 +27,9 @@ namespace Fall2020_CSC403_Project {
     public FrmLevel() {
       InitializeComponent();
             loseScreen = new Lose();
+            userSelection = new userSel();
+            userSelection.Show();
+
  
     }
 
