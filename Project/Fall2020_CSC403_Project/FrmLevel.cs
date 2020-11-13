@@ -91,7 +91,7 @@ namespace Fall2020_CSC403_Project {
         }
 
     private void tmrPlayerMove_Tick(object sender, EventArgs e) {
-            player = Game.player;
+           
 
             // check to see if player is alive
             if (player.Health <= 0)
