@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
 
-
 namespace Fall2020_CSC403_Project
 {
     public partial class FrmBattle : Form
@@ -47,15 +46,13 @@ namespace Fall2020_CSC403_Project
             player.AttackEvent += EnemyDamage;
             player.HealEvent += PlayerHealing;
 
-/*            if (enemy.MaxHealth == 0)
-            {
-                player.LevelEvent += PlayerLeveling;
-            }*/
+            /*            if (enemy.MaxHealth == 0)
+                        {
+                            player.LevelEvent += PlayerLeveling;
+                        }*/
 
             // show health
             UpdateHealthBars();
-            //show armor
-            UpdateArmorBars();
         }
 
         public void SetupForBossBattle()
@@ -82,14 +79,14 @@ namespace Fall2020_CSC403_Project
                 instance.Setup();
             }
             return instance;
-            
+
         }
 
 
         private void UpdateHealthBars()
         {
             float playerHealthPer = player.Health / (float)player.MaxHealth;
-            float enemyHealthPer = enemy.EnemyHealth / (float)enemy.MaxHealth;
+            float enemyHealthPer = enemy.Health / (float)enemy.MaxHealth;
 
             const int MAX_HEALTHBAR_WIDTH = 226;
             lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
@@ -104,13 +101,10 @@ namespace Fall2020_CSC403_Project
         private void UpdateArmorBars()
         {
             float playerArmorPer = player.Armor / (float)player.MaxArmor;
-            float enemyArmorPer = enemy.EnemyArmor / (float)enemy.MaxArmor;
             const int MAX_ARMORBAR_WIDTH = 226;
-            lblPlayerArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
-            lblEnemyArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * enemyArmorPer);
+            //lblPlayerArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
 
-            lblPlayerArmorFull.Text = player.Armor.ToString();
-            lblEnemyArmorFull.Text = enemy.Armor.ToString();
+            //lblPlayerArmorFull.Text = player.Armor.ToString();
         }
 
 
@@ -176,9 +170,9 @@ namespace Fall2020_CSC403_Project
 
         private void btnAttack_Click(object sender, EventArgs e)
         {
-            if(isBossBattle == true)
+            if (isBossBattle == true)
             {
-                if(bossStage == 1)
+                if (bossStage == 1)
                 {
                     player.OnAttack(-4, player, enemy);
                     if (enemy.Health > 0)
@@ -195,15 +189,14 @@ namespace Fall2020_CSC403_Project
                         enemy.Health = enemy.MaxHealth;
                         enemy.strength = 3;
                         //picEnemy.BackgroundImage = System.Drawing.Image();
-                        
+
                     }
 
                     UpdateHealthBars();
-                    UpdateArmorBars();
 
                 }
 
-                else if(bossStage == 2)
+                else if (bossStage == 2)
                 {
                     player.OnAttack(-4, player, enemy);
                     if (enemy.Health > 0)
@@ -219,14 +212,13 @@ namespace Fall2020_CSC403_Project
                         enemy.MaxHealth = 40;
                         enemy.Health = enemy.MaxHealth;
                         enemy.strength = 4;
-                    }    
+                    }
 
                     UpdateHealthBars();
-                    UpdateArmorBars();
 
                 }
 
-                else if(bossStage == 3)
+                else if (bossStage == 3)
                 {
                     player.OnAttack(-4, player, enemy);
                     if (enemy.Health > 0)
@@ -240,7 +232,6 @@ namespace Fall2020_CSC403_Project
                     }
 
                     UpdateHealthBars();
-                    UpdateArmorBars();
                 }
 
                 else
@@ -259,7 +250,6 @@ namespace Fall2020_CSC403_Project
                 }
 
                 UpdateHealthBars();
-                UpdateArmorBars();
                 if (player.Health <= 0 || enemy.Health <= 0)
                 {
                     instance = null;
@@ -272,34 +262,18 @@ namespace Fall2020_CSC403_Project
                     Close();
                 }
             }
-            
+
         }
 
 
         private void EnemyDamage(int amount)
         {
-            if (enemy.EnemyArmor != 0)
-            {
-                enemy.AlterArmor(amount);
-            }
-            else
-            {
-                enemy.AlterHealth(amount);
-            }
-            
+            enemy.AlterHealth(amount);
         }
 
         private void PlayerDamage(int amount)
         {
-            if (player.Armor != 0)
-            {
-                player.AlterArmor(amount);
-            }
-            else
-            {
-                player.AlterHealth(amount);
-            }
-            
+            player.AlterHealth(amount);
         }
 
         private void PlayerHealing(int amount)
@@ -386,7 +360,7 @@ namespace Fall2020_CSC403_Project
             {
                 food.Show();
                 UpdateHealthBars();
-                
+
             }
             else
             {
@@ -400,5 +374,5 @@ namespace Fall2020_CSC403_Project
 
         }
     }
-    
+
 }
