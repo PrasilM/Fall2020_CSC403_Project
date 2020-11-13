@@ -32,8 +32,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "hubLevel";
+            this.picCashewBro = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picCashewBro)).BeginInit();
+
+            //
+            // picCashewBro
+            //
+            this.picCashewBro.BackColor = System.Drawing.Color.Transparent;
+            this.picCashewBro.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.NPC_cashewBro;
+            this.picCashewBro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCashewBro.Location = new System.Drawing.Point(1117, 665);
+            this.picCashewBro.Margin = new System.Windows.Forms.Padding(4);
+            this.picCashewBro.Name = "picCashewBro";
+            this.picCashewBro.Size = new System.Drawing.Size(85, 132);
+            this.picCashewBro.TabIndex = 5;
+            this.picCashewBro.TabStop = false;
+
+            this.Controls.Add(this.picCashewBro);
+
+            ((System.ComponentModel.ISupportInitialize)(this.picCashewBro)).EndInit();
+
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox picCashewBro;
     }
 }

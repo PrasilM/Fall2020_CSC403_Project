@@ -1,4 +1,5 @@
-﻿using Fall2020_CSC403_Project.code;
+﻿
+using Fall2020_CSC403_Project.code;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -15,7 +16,7 @@ namespace Fall2020_CSC403_Project {
         private Lose loseScreen;
         private userSel userSelection;
 
-    ///private NPC NPCAlmondBoi;
+    private NPC NPCAlmondBoi;
 
     //private Boss finalBoss;
 
@@ -41,13 +42,13 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING), "Water");
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Posion");
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Fire");
-      ///NPCAlmondBoi = new NPC(CreatePosition(picNPCAlmondboi), CreateCollider(picNPCAlmondboi, PADDING));
+      NPCAlmondBoi = new NPC(CreatePosition(picAlmondboi), CreateCollider(picAlmondboi, PADDING));
 
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
 
-      ///NPCAlmondBoi.Img = picNPCAlmondboi.BackgroundImage;
+      NPCAlmondBoi.Img = picAlmondboi.BackgroundImage;
 
       bossKoolaid.Color = Color.Red;
       enemyPoisonPacket.Color = Color.Green;

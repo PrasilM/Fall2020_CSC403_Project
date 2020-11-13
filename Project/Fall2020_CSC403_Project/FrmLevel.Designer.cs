@@ -47,6 +47,9 @@
             this.picPlayer = new System.Windows.Forms.PictureBox();
             this.lblPlayerExpFull = new System.Windows.Forms.Label();
             this.labelplayerexp = new System.Windows.Forms.Label();
+            this.picAlmondboi = new System.Windows.Forms.PictureBox();
+            
+            
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall8)).BeginInit();
@@ -64,6 +67,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAlmondboi)).BeginInit();
+            
+            
+
             this.SuspendLayout();
             // 
             // lblInGameTime
@@ -236,7 +243,23 @@
             this.picWall5.Size = new System.Drawing.Size(477, 82);
             this.picWall5.TabIndex = 6;
             this.picWall5.TabStop = false;
-            // 
+
+
+
+            //
+            //picAlmondboi
+            //
+            this.picAlmondboi.BackColor = System.Drawing.Color.Transparent;
+            this.picAlmondboi.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.NPC_almondboi;
+            this.picAlmondboi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picAlmondboi.Location = new System.Drawing.Point(1117, 665);
+            this.picAlmondboi.Margin = new System.Windows.Forms.Padding(4);
+            this.picAlmondboi.Name = "picAlmondboi";
+            this.picAlmondboi.Size = new System.Drawing.Size(85, 132);
+            this.picAlmondboi.TabIndex = 5;
+            this.picAlmondboi.TabStop = false;
+
+            //
             // picEnemyCheeto
             // 
             this.picEnemyCheeto.BackColor = System.Drawing.Color.Transparent;
@@ -346,6 +369,9 @@
             this.Controls.Add(this.picWall3);
             this.Controls.Add(this.picBossKoolAid);
             this.Controls.Add(this.picPlayer);
+            this.Controls.Add(this.picAlmondboi);
+            
+            
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmLevel";
@@ -371,6 +397,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAlmondboi)).EndInit();
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,6 +428,10 @@
     private System.Windows.Forms.PictureBox picWall11;
         private System.Windows.Forms.Label lblPlayerExpFull;
         private System.Windows.Forms.Label labelplayerexp;
+        private System.Windows.Forms.PictureBox picAlmondboi;
+
+
+
     }
 }
 

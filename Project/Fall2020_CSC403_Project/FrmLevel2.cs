@@ -24,7 +24,7 @@ namespace Fall2020_CSC403_Project
 
         private void FrmLevel2_Load(Object sender, EventArgs e)
         {
-            //NPCraidIt = new NPC(CreatePosition(picRaidIt), CreateCollider(picRaidIt, PADDING));
+            NPCraidIt = new NPC(CreatePosition(picRaidIt), CreateCollider(picRaidIt, PADDING));
         }
 
         private Vector2 CreatePosition(PictureBox pic)
