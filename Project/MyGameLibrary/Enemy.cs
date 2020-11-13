@@ -26,11 +26,5 @@ namespace Fall2020_CSC403_Project.code {
         public Enemy(Vector2 initPos, Collider collider, string eleType) : base(initPos, collider) {
             elementalType = eleType;
         }
-
-       /// <summary>
-       /// This is the enemy level up, takes in level from battle character and increases it
-       /// </summary>
-       /// <param name="Level"></param>
-        
     }
 }
