@@ -111,6 +111,12 @@ namespace Fall2020_CSC403_Project {
                 {
                     player.MoveBack();
                 }
+                if(HitTheExit(player))
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new hubLevel());
+                }
 
                 // check collision with enemies
                 if (HitAChar(player, enemyPoisonPacket))
@@ -155,6 +161,13 @@ namespace Fall2020_CSC403_Project {
       }
       return hitAWall;
     }
+    private bool HitTheExit(Character c)
+        {
+            bool hitTheExit = false;
+            if (c.Collider.Intersects(exit.Collider))
+                hitTheExit = true;
+            return hitTheExit;
+        }
 
     private bool HitAChar(Character you, Character other) {
       return you.Collider.Intersects(other.Collider);
