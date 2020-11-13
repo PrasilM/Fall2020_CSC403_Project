@@ -179,6 +179,11 @@ namespace Fall2020_CSC403_Project
                     else
                     {
                         bossStage = 2;
+                        enemy.elementalType = "Fire";
+                        updateElements();
+                        enemy.MaxHealth = 30;
+                        enemy.Health = enemy.MaxHealth;
+                        
                     }
 
                     UpdateHealthBars();
@@ -196,6 +201,10 @@ namespace Fall2020_CSC403_Project
                     else
                     {
                         bossStage = 3;
+                        enemy.elementalType = "Posion";
+                        updateElements();
+                        enemy.MaxHealth = 40;
+                        enemy.Health = enemy.MaxHealth;
                     }    
 
                     UpdateHealthBars();
