@@ -42,7 +42,7 @@ namespace Fall2020_CSC403_Project {
       player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Normal");
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Posion");
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Fire");
-            this.Enemy3 = new Enemy(CreatePosition(L1enemy3), CreateCollider(L1enemy3, PADDING), "Fire");
+            this.Enemy3 = new Enemy(CreatePosition(L1enemy3), CreateCollider(L1enemy3, PADDING), "Earth");
 
 
             NPCAlmondBoi = new NPC(CreatePosition(picAlmondboi), CreateCollider(picAlmondboi, PADDING));
@@ -50,12 +50,14 @@ namespace Fall2020_CSC403_Project {
     
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+            Enemy3.Img = L1enemy3.BackgroundImage;
 
       NPCAlmondBoi.Img = picAlmondboi.BackgroundImage;
 
 
       enemyPoisonPacket.Color = Color.Green;
       enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+            Enemy3.Color = Color.Blue;
 
       walls = new Character[NUM_WALLS];
       for (int w = 0; w < NUM_WALLS; w++) {
@@ -115,12 +117,12 @@ namespace Fall2020_CSC403_Project {
                 {
                     player.MoveBack();
                 }
-                if(HitTheExit(player))
+                /*if(HitTheExit(player))
                 {
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
                     Application.Run(new hubLevel());
-                }
+                }*/
 
                 // check collision with enemies
                 if (HitAChar(player, enemyPoisonPacket))
@@ -174,13 +176,13 @@ namespace Fall2020_CSC403_Project {
       }
       return hitAWall;
     }
-    private bool HitTheExit(Character c)
+   /* private bool HitTheExit(Character c)
         {
             bool hitTheExit = false;
             if (c.Collider.Intersects(exit.Collider))
                 hitTheExit = true;
             return hitTheExit;
-        }
+        }*/
 
     private bool HitAChar(Character you, Character other) {
       return you.Collider.Intersects(other.Collider);

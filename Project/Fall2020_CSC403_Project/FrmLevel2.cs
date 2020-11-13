@@ -82,8 +82,9 @@ namespace Fall2020_CSC403_Project
             //NPCAlmondBoi.Img = picAlmondboi.BackgroundImage;
 
 
-            //enemyPoisonPacket.Color = Color.Green;
-            //enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+            enemy1.Color = Color.Red;
+            enemy2.Color = Color.Blue;
+            enemy3.Color = Color.Green;
 
             walls = new Character[NUM_WALLS];
             for (int w = 0; w < NUM_WALLS; w++)

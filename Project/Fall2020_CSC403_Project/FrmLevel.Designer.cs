@@ -244,7 +244,7 @@
             this.picEnemyCheeto.BackColor = System.Drawing.Color.Transparent;
             this.picEnemyCheeto.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_cheetos;
             this.picEnemyCheeto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picEnemyCheeto.Location = new System.Drawing.Point(1286, 307);
+            this.picEnemyCheeto.Location = new System.Drawing.Point(596, 626);
             this.picEnemyCheeto.Margin = new System.Windows.Forms.Padding(4);
             this.picEnemyCheeto.Name = "picEnemyCheeto";
             this.picEnemyCheeto.Size = new System.Drawing.Size(85, 132);
@@ -256,7 +256,7 @@
             this.picEnemyPoisonPacket.BackColor = System.Drawing.Color.Transparent;
             this.picEnemyPoisonPacket.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_poisonpacket;
             this.picEnemyPoisonPacket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picEnemyPoisonPacket.Location = new System.Drawing.Point(588, 338);
+            this.picEnemyPoisonPacket.Location = new System.Drawing.Point(188, 148);
             this.picEnemyPoisonPacket.Margin = new System.Windows.Forms.Padding(4);
             this.picEnemyPoisonPacket.Name = "picEnemyPoisonPacket";
             this.picEnemyPoisonPacket.Size = new System.Drawing.Size(84, 118);
@@ -324,7 +324,7 @@
             // 
             this.L1enemy3.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Crazy_Squares;
             this.L1enemy3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.L1enemy3.Location = new System.Drawing.Point(971, 321);
+            this.L1enemy3.Location = new System.Drawing.Point(1275, 162);
             this.L1enemy3.Name = "L1enemy3";
             this.L1enemy3.Size = new System.Drawing.Size(138, 135);
             this.L1enemy3.TabIndex = 20;
