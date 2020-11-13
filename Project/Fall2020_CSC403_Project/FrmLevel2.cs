@@ -56,7 +56,7 @@ namespace Fall2020_CSC403_Project
 
         }
 
-        /*
+        
         private void FrmLevel2_Load(object sender, EventArgs e)
         {
             const int PADDING = 7;
@@ -109,7 +109,7 @@ namespace Fall2020_CSC403_Project
             }
             return hitAWall;
         }
-        */
+        
 
         private void FrmLevel2_KeyUp(object sender, KeyEventArgs e)
         {
