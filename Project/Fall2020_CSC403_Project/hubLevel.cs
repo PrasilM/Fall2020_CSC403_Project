@@ -102,8 +102,10 @@ namespace Fall2020_CSC403_Project {
                 }
                 if(HitTheExit(player))
                 {
+                    player.GoLeft();
                     level = new FrmLevel();
                     level.Show();
+                    
                 }
 
                 // check collision with enemies
