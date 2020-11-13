@@ -115,7 +115,13 @@ namespace Fall2020_CSC403_Project {
                 // check collision with enemies
                 if (HitAChar(player, enemyPoisonPacket))
                 {
-                    Fight(enemyPoisonPacket);
+                    if(picEnemyPoisonPacket.Visible == true)
+                    {
+                        Fight(enemyPoisonPacket);
+                        picEnemyPoisonPacket.Visible = false;
+                    }
+
+                    
                 }
                 else if (HitAChar(player, enemyCheeto))
                 {

@@ -68,5 +68,10 @@ namespace Fall2020_CSC403_Project
         {
 
         }
+
+        private void lblApple_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

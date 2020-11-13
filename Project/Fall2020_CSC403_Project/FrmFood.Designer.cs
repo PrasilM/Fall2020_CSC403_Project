@@ -104,6 +104,7 @@
             this.lblApple.Size = new System.Drawing.Size(95, 17);
             this.lblApple.TabIndex = 5;
             this.lblApple.Text = "Heals hp by 1";
+            this.lblApple.Click += new System.EventHandler(this.lblApple_Click);
             // 
             // lblChicken
             // 

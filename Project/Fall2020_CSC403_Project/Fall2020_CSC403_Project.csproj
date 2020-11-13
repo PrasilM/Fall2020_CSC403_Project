@@ -181,6 +181,9 @@
     <None Include="data\bossFloor.jpg" />
     <None Include="data\bossFloorNew.jpg" />
     <None Include="data\boss wall.jpg" />
+    <None Include="data\Characters\Captain_Crunch.jpg" />
+    <None Include="data\Characters\Crazy_Squares.png" />
+    <None Include="data\Characters\Kool-Aid_Man.png" />
     <Content Include="data\cloak.png" />
     <Content Include="data\flipflop.jpg" />
     <None Include="data\gameOver.jpg" />
