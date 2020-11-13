@@ -54,6 +54,8 @@ namespace Fall2020_CSC403_Project
 
             // show health
             UpdateHealthBars();
+            //show armor
+            UpdateArmorBars();
         }
 
         public void SetupForBossBattle()
@@ -197,6 +199,7 @@ namespace Fall2020_CSC403_Project
                     }
 
                     UpdateHealthBars();
+                    UpdateArmorBars();
 
                 }
 
@@ -219,6 +222,7 @@ namespace Fall2020_CSC403_Project
                     }    
 
                     UpdateHealthBars();
+                    UpdateArmorBars();
 
                 }
 
@@ -236,6 +240,7 @@ namespace Fall2020_CSC403_Project
                     }
 
                     UpdateHealthBars();
+                    UpdateArmorBars();
                 }
 
                 else
@@ -254,6 +259,7 @@ namespace Fall2020_CSC403_Project
                 }
 
                 UpdateHealthBars();
+                UpdateArmorBars();
                 if (player.Health <= 0 || enemy.Health <= 0)
                 {
                     instance = null;
