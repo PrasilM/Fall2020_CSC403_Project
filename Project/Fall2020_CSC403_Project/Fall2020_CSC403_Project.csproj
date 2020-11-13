@@ -116,6 +116,9 @@
     <EmbeddedResource Include="FrmLevel.resx">
       <DependentUpon>FrmLevel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLevel2.resx">
+      <DependentUpon>FrmLevel2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lose.resx">
       <DependentUpon>Lose.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +190,9 @@
     <Content Include="data\cloak.png" />
     <Content Include="data\flipflop.jpg" />
     <None Include="data\gameOver.jpg" />
+    <None Include="data\grassTexture.png" />
+    <None Include="data\grass_wall.png" />
+    <None Include="data\grassHedge.jpg" />
     <Content Include="data\Save Data\Inventory Contents.txt" />
     <Content Include="data\Save Data\Level Progress.txt" />
     <Content Include="data\Save Data\Player Status.txt" />
