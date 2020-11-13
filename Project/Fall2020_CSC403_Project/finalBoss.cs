@@ -18,6 +18,8 @@ namespace Fall2020_CSC403_Project
 
         private Enemy bossKoolaid;
 
+        private Lose loseScreen;
+
 
         //private Boss finalBoss;
 
@@ -29,6 +31,8 @@ namespace Fall2020_CSC403_Project
         public finalBoss()
         {
             InitializeComponent();
+            loseScreen = new Lose();
+
         }
 
         private Vector2 CreatePosition(PictureBox pic)
@@ -42,58 +46,7 @@ namespace Fall2020_CSC403_Project
             return new Collider(rect);
         }
 
-        private void FrmLevel_KeyUp(object sender, KeyEventArgs e)
-        {
-            player.ResetMoveSpeed();
-        }
-
-        private void tmrUpdateInGameTime_Tick(object sender, EventArgs e)
-        {
-            TimeSpan span = DateTime.Now - timeBegin;
-            string time = span.ToString(@"hh\:mm\:ss");
-            //lblInGameTime.Text = "Time: " + time.ToString();
-            UpdateExpBars();
-        }
-
-        private void tmrPlayerMove_Tick(object sender, EventArgs e)
-        {
-
-
-            // check to see if player is alive
-            if (player.Health <= 0)
-            {
-
-            }
-
-            else
-            {
-                // move player
-                player.Move();
-
-                // check collision with walls
-                if (HitAWall(player))
-                {
-                    player.MoveBack();
-                }
-
-                // check collision with enemies
-
-                if (HitAChar(player, bossKoolaid))
-                {
-                    Fight(bossKoolaid);
-                }
-
-
-                // update player's picture box
-                picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
-            }
-
-
-
-
-
-
-        }
+        
 
         private bool HitAWall(Character c)
         {
@@ -134,50 +87,8 @@ namespace Fall2020_CSC403_Project
             UpdateExpBars();
         }
 
-        private void FrmLevel_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (player.Health <= 0)
-            {
-                picPlayer.BackgroundImage = null;
-            }
 
-            else
-            {
-                switch (e.KeyCode)
-                {
-                    case Keys.Left:
-                        player.GoLeft();
-                        break;
-
-                    case Keys.Right:
-                        player.GoRight();
-                        break;
-
-                    case Keys.Up:
-                        player.GoUp();
-                        break;
-
-                    case Keys.Down:
-                        player.GoDown();
-                        break;
-
-                    default:
-                        player.ResetMoveSpeed();
-                        break;
-                }
-            }
-
-        }
-
-        private void UpdateExpBars()
-        {
-            float playerExpPer = player.Level / (float)player.MaxLevel;
-
-            const int MAX_EXPBAR_WIDTH = 226;
-            //lblPlayerExpFull.Width = (int)(MAX_EXPBAR_WIDTH * playerExpPer);
-
-            //lblPlayerExpFull.Text = player.Level.ToString();
-        }
+     
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -233,6 +144,75 @@ namespace Fall2020_CSC403_Project
         private void picBossKoolAid_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tmrUpdateInGameTime_Tick(object sender, EventArgs e)
+        {
+            TimeSpan span = DateTime.Now - timeBegin;
+            string time = span.ToString(@"hh\:mm\:ss");
+            lblInGameTime.Text = "Time: " + time.ToString();
+            UpdateExpBars();
+        }
+
+        private void tmrPlayerMove_Tick(object sender, EventArgs e)
+        {
+
+
+            // check to see if player is alive
+            if (player.Health <= 0)
+            {
+                if (loseScreen != null)
+                {
+                    picPlayer.BackgroundImage = null;
+                    loseScreen.Show();
+                    loseScreen = null;
+                    this.Hide();
+                }
+
+
+            }
+
+            else
+            {
+                // move player
+                player.Move();
+
+                // check collision with walls
+                if (HitAWall(player))
+                {
+                    player.MoveBack();
+                }
+
+                // check collision with enemies
+                
+                if (HitAChar(player, bossKoolaid))
+                {
+                    if (picBossKoolAid.Visible == true)
+                    {
+                        Fight(bossKoolaid);
+                        picBossKoolAid.Visible = false;
+                    }
+                }
+
+
+                // update player's picture box
+                picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+            }
+        }
+
+        private void lblInGameTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateExpBars()
+        {
+            float playerExpPer = player.Level / (float)player.MaxLevel;
+
+            const int MAX_EXPBAR_WIDTH = 226;
+            lblPlayerExpFull.Width = (int)(MAX_EXPBAR_WIDTH * playerExpPer);
+
+            lblPlayerExpFull.Text = player.Level.ToString();
         }
     }
 }

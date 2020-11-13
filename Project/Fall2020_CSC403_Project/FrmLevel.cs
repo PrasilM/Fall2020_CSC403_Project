@@ -125,11 +125,19 @@ namespace Fall2020_CSC403_Project {
                 }
                 else if (HitAChar(player, enemyCheeto))
                 {
-                    Fight(enemyCheeto);
+                    if(picEnemyCheeto.Visible == true)
+                    {
+                        Fight(enemyCheeto);
+                        picEnemyCheeto.Visible = false;
+                    }
                 }
                 if (HitAChar(player, bossKoolaid))
                 {
-                    Fight(bossKoolaid);
+                    if(picBossKoolAid.Visible == true)
+                    {
+                        Fight(bossKoolaid);
+                        picBossKoolAid.Visible = false;
+                    }
                 }
 
 

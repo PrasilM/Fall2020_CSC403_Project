@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(finalBoss));
             this.picWall1 = new System.Windows.Forms.PictureBox();
             this.picWall0 = new System.Windows.Forms.PictureBox();
@@ -40,6 +41,11 @@
             this.picWall4 = new System.Windows.Forms.PictureBox();
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
+            this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
+            this.lblInGameTime = new System.Windows.Forms.Label();
+            this.lblPlayerExpFull = new System.Windows.Forms.Label();
+            this.labelplayerexp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
@@ -172,6 +178,51 @@
             this.picPlayer.TabIndex = 11;
             this.picPlayer.TabStop = false;
             // 
+            // tmrUpdateInGameTime
+            // 
+            this.tmrUpdateInGameTime.Enabled = true;
+            this.tmrUpdateInGameTime.Tick += new System.EventHandler(this.tmrUpdateInGameTime_Tick);
+            // 
+            // tmrPlayerMove
+            // 
+            this.tmrPlayerMove.Enabled = true;
+            this.tmrPlayerMove.Interval = 10;
+            this.tmrPlayerMove.Tick += new System.EventHandler(this.tmrPlayerMove_Tick);
+            // 
+            // lblInGameTime
+            // 
+            this.lblInGameTime.AutoSize = true;
+            this.lblInGameTime.BackColor = System.Drawing.Color.Black;
+            this.lblInGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInGameTime.ForeColor = System.Drawing.Color.White;
+            this.lblInGameTime.Location = new System.Drawing.Point(13, 9);
+            this.lblInGameTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInGameTime.Name = "lblInGameTime";
+            this.lblInGameTime.Size = new System.Drawing.Size(60, 24);
+            this.lblInGameTime.TabIndex = 12;
+            this.lblInGameTime.Text = "label1";
+            this.lblInGameTime.Click += new System.EventHandler(this.lblInGameTime_Click);
+            // 
+            // lblPlayerExpFull
+            // 
+            this.lblPlayerExpFull.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblPlayerExpFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerExpFull.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblPlayerExpFull.Location = new System.Drawing.Point(23, 860);
+            this.lblPlayerExpFull.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlayerExpFull.Name = "lblPlayerExpFull";
+            this.lblPlayerExpFull.Size = new System.Drawing.Size(50, 25);
+            this.lblPlayerExpFull.TabIndex = 19;
+            // 
+            // labelplayerexp
+            // 
+            this.labelplayerexp.AutoSize = true;
+            this.labelplayerexp.Location = new System.Drawing.Point(12, 824);
+            this.labelplayerexp.Name = "labelplayerexp";
+            this.labelplayerexp.Size = new System.Drawing.Size(79, 17);
+            this.labelplayerexp.TabIndex = 20;
+            this.labelplayerexp.Text = "Player EXP";
+            // 
             // finalBoss
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -179,6 +230,9 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.bossFloorNew;
             this.ClientSize = new System.Drawing.Size(1568, 894);
+            this.Controls.Add(this.labelplayerexp);
+            this.Controls.Add(this.lblPlayerExpFull);
+            this.Controls.Add(this.lblInGameTime);
             this.Controls.Add(this.picPlayer);
             this.Controls.Add(this.picBossKoolAid);
             this.Controls.Add(this.picWall4);
@@ -205,6 +259,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -220,5 +275,10 @@
         private System.Windows.Forms.PictureBox picWall4;
         public System.Windows.Forms.PictureBox picBossKoolAid;
         public System.Windows.Forms.PictureBox picPlayer;
+        private System.Windows.Forms.Timer tmrUpdateInGameTime;
+        private System.Windows.Forms.Timer tmrPlayerMove;
+        private System.Windows.Forms.Label lblInGameTime;
+        private System.Windows.Forms.Label lblPlayerExpFull;
+        private System.Windows.Forms.Label labelplayerexp;
     }
 }
