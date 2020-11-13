@@ -45,6 +45,7 @@ namespace Fall2020_CSC403_Project
             enemy.AttackEvent += PlayerDamage;
             player.AttackEvent += EnemyDamage;
             player.HealEvent += PlayerHealing;
+            player.ArmorEvent += PlayerArmor;
 
             /*            if (enemy.MaxHealth == 0)
                         {
@@ -295,6 +296,11 @@ namespace Fall2020_CSC403_Project
             }
         }
 
+        private void PlayerArmor(int amount)
+        {
+            player.AlterArmor(amount);
+        }
+
         private void PlayerHealing(int amount)
         {
             player.AlterHealth(amount);
@@ -371,6 +377,8 @@ namespace Fall2020_CSC403_Project
         private void Equipment_Click(object sender, EventArgs e)
         {
             equipment.Show();
+            UpdateArmorBars();
+            UpdateHealthBars();
         }
         //Food
         private void Food_Click(object sender, EventArgs e)

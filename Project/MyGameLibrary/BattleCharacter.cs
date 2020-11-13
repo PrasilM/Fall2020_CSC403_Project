@@ -195,7 +195,7 @@ namespace Fall2020_CSC403_Project.code
         /// <param name="amount"></param>
         public void AdditionalArmor(int amount)
         {
-            Armor += amount;
+            ArmorEvent((int)(amount));
         }
 
         public void AlterArmor(int amount)
