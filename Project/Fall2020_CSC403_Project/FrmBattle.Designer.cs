@@ -127,7 +127,7 @@
             this.lblEnemyArmorFull.ForeColor = System.Drawing.Color.Black;
             this.lblEnemyArmorFull.Location = new System.Drawing.Point(900, 900);
             this.lblEnemyArmorFull.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEnemyArmorFull.Name = "lblPlayerArmorFull";
+            this.lblEnemyArmorFull.Name = "lblEnemyArmorFull";
             this.lblEnemyArmorFull.Size = new System.Drawing.Size(301, 25);
             this.lblEnemyArmorFull.TabIndex = 3;
 
