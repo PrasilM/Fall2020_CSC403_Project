@@ -53,33 +53,7 @@ namespace Fall2020_CSC403_Project.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-        internal static System.Drawing.Bitmap NPC_almondboi
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("NPC_almondboi", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
-        internal static System.Drawing.Bitmap NPC_cashewBro
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("NPC_cashewBro", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
-        internal static System.Drawing.Bitmap NPC_raitIT
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("NPC_raidIT", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
+        
         internal static System.Drawing.Bitmap enemy_koolaid {
             get {
                 object obj = ResourceManager.GetObject("enemy_koolaid", resourceCulture);
@@ -208,6 +182,27 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap Kool_Aid_Man {
             get {
                 object obj = ResourceManager.GetObject("Kool-Aid_Man", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap NPC_almondboi {
+            get {
+                object obj = ResourceManager.GetObject("NPC_almondboi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap NPC_cashewBro {
+            get {
+                object obj = ResourceManager.GetObject("NPC_cashewBro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap NPC_raitIT {
+            get {
+                object obj = ResourceManager.GetObject("NPC_raitIT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
