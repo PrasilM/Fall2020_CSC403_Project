@@ -14,6 +14,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyCheeto;
         private Lose loseScreen;
         private userSel userSelection;
+        private Enemy Enemy3;
 
     private NPC NPCAlmondBoi;
 
@@ -41,7 +42,10 @@ namespace Fall2020_CSC403_Project {
       player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Normal");
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Posion");
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Fire");
-      NPCAlmondBoi = new NPC(CreatePosition(picAlmondboi), CreateCollider(picAlmondboi, PADDING));
+            this.Enemy3 = new Enemy(CreatePosition(L1enemy3), CreateCollider(L1enemy3, PADDING), "Fire");
+
+
+            NPCAlmondBoi = new NPC(CreatePosition(picAlmondboi), CreateCollider(picAlmondboi, PADDING));
 
     
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
@@ -135,6 +139,15 @@ namespace Fall2020_CSC403_Project {
                     {
                         Fight(enemyCheeto);
                         picEnemyCheeto.Visible = false;
+                    }
+                }
+
+                if(HitAChar(player, Enemy3))
+                {
+                    if(L1enemy3.Visible == true)
+                    {
+                        Fight(Enemy3);
+                        L1enemy3.Visible = false;
                     }
                 }
 
@@ -258,7 +271,17 @@ namespace Fall2020_CSC403_Project {
         {
 
         }
-  }
+
+        private void picWall11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void L1enemy3_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 
 
 }

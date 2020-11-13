@@ -198,6 +198,8 @@
     <None Include="data\grassTexture.png" />
     <None Include="data\grass_wall.png" />
     <None Include="data\grassHedge.jpg" />
+    <None Include="data\raw images\636252777098624896.jpeg" />
+    <None Include="data\raw images\grape_packet.jpeg" />
     <Content Include="data\Save Data\Inventory Contents.txt" />
     <Content Include="data\Save Data\Level Progress.txt" />
     <Content Include="data\Save Data\Player Status.txt" />

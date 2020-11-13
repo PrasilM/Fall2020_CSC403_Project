@@ -122,21 +122,18 @@
             this.picPlayer.Size = new System.Drawing.Size(72, 130);
             this.picPlayer.TabIndex = 7;
             this.picPlayer.TabStop = false;
-
             // 
             // picCashewBro
             // 
             this.picCashewBro.BackColor = System.Drawing.Color.Transparent;
             this.picCashewBro.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.NPC_cashewBro;
             this.picCashewBro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picCashewBro.Location = new System.Drawing.Point(950, 500);
+            this.picCashewBro.Location = new System.Drawing.Point(134, 91);
             this.picCashewBro.Margin = new System.Windows.Forms.Padding(4);
             this.picCashewBro.Name = "picCashewBro";
             this.picCashewBro.Size = new System.Drawing.Size(72, 130);
             this.picCashewBro.TabIndex = 7;
             this.picCashewBro.TabStop = false;
-
-
             // 
             // hubLevel
             // 
