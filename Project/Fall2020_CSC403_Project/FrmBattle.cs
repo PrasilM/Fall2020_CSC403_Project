@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
 
+
 namespace Fall2020_CSC403_Project
 {
     public partial class FrmBattle : Form
@@ -86,7 +87,7 @@ namespace Fall2020_CSC403_Project
         private void UpdateHealthBars()
         {
             float playerHealthPer = player.Health / (float)player.MaxHealth;
-            float enemyHealthPer = enemy.Health / (float)enemy.MaxHealth;
+            float enemyHealthPer = enemy.EnemyHealth / (float)enemy.MaxHealth;
 
             const int MAX_HEALTHBAR_WIDTH = 226;
             lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
@@ -101,10 +102,13 @@ namespace Fall2020_CSC403_Project
         private void UpdateArmorBars()
         {
             float playerArmorPer = player.Armor / (float)player.MaxArmor;
+            float enemyArmorPer = enemy.EnemyArmor / (float)enemy.MaxArmor;
             const int MAX_ARMORBAR_WIDTH = 226;
-            //lblPlayerArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
+            lblPlayerArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * playerArmorPer);
+            lblEnemyArmorFull.Width = (int)(MAX_ARMORBAR_WIDTH * enemyArmorPer);
 
-            //lblPlayerArmorFull.Text = player.Armor.ToString();
+            lblPlayerArmorFull.Text = player.Armor.ToString();
+            lblEnemyArmorFull.Text = enemy.Armor.ToString();
         }
 
 
@@ -268,12 +272,28 @@ namespace Fall2020_CSC403_Project
 
         private void EnemyDamage(int amount)
         {
-            enemy.AlterHealth(amount);
+            if (enemy.EnemyArmor != 0)
+            {
+                enemy.AlterArmor(amount);
+            }
+            else
+            {
+                enemy.AlterHealth(amount);
+            }
+            
         }
 
         private void PlayerDamage(int amount)
         {
-            player.AlterHealth(amount);
+            if (player.Armor != 0)
+            {
+                player.AlterArmor(amount);
+            }
+            else
+            {
+                player.AlterHealth(amount);
+            }
+            
         }
 
         private void PlayerHealing(int amount)

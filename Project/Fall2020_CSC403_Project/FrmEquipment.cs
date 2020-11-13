@@ -56,14 +56,14 @@ namespace Fall2020_CSC403_Project
 
         private void cloak_Click(object sender, EventArgs e)
         {
-            player.AdditionalArmor(3);
+            player.AlterArmor(3);
             cloak.Enabled = false;
             this.Visible = false;
         }
 
         private void ring_Click(object sender, EventArgs e)
         {
-            player.AdditionalArmor(-1);
+            player.AlterArmor(-1);
             player.AdditionalStrength(2);
             ring.Enabled = false;
             this.Visible = false;

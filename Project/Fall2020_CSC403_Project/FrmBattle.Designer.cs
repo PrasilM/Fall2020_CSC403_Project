@@ -31,9 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.btnAttack = new System.Windows.Forms.Button();
             this.lblPlayerHealthFull = new System.Windows.Forms.Label();
+            this.lblPlayerArmorFull = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblEnemyHealthFull = new System.Windows.Forms.Label();
+            this.lblEnemyArmorFull = new System.Windows.Forms.Label();
             this.tmrFinalBattle = new System.Windows.Forms.Timer(this.components);
             this.picBossBattle = new System.Windows.Forms.PictureBox();
             this.picEnemy = new System.Windows.Forms.PictureBox();
@@ -61,6 +63,19 @@
             this.btnAttack.Text = "Attack";
             this.btnAttack.UseVisualStyleBackColor = true;
             this.btnAttack.Click += new System.EventHandler(this.btnAttack_Click);
+
+            //
+            //lblPlayerArmorFull
+            //
+            this.lblPlayerArmorFull.BackColor = System.Drawing.Color.Red;
+            this.lblPlayerArmorFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerArmorFull.ForeColor = System.Drawing.Color.Black;
+            this.lblPlayerArmorFull.Location = new System.Drawing.Point(95, 74);
+            this.lblPlayerArmorFull.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlayerArmorFull.Name = "lblPlayerArmorFull";
+            this.lblPlayerArmorFull.Size = new System.Drawing.Size(301, 25);
+            this.lblPlayerArmorFull.TabIndex = 3;
+
             // 
             // lblPlayerHealthFull
             // 
@@ -103,6 +118,19 @@
             this.lblEnemyHealthFull.Name = "lblEnemyHealthFull";
             this.lblEnemyHealthFull.Size = new System.Drawing.Size(301, 25);
             this.lblEnemyHealthFull.TabIndex = 6;
+
+            //
+            //lblEnemyArmorFull
+            //
+            this.lblEnemyArmorFull.BackColor = System.Drawing.Color.Red;
+            this.lblEnemyArmorFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnemyArmorFull.ForeColor = System.Drawing.Color.Black;
+            this.lblEnemyArmorFull.Location = new System.Drawing.Point(95, 74);
+            this.lblEnemyArmorFull.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEnemyArmorFull.Name = "lblPlayerArmorFull";
+            this.lblEnemyArmorFull.Size = new System.Drawing.Size(301, 25);
+            this.lblEnemyArmorFull.TabIndex = 3;
+
             // 
             // tmrFinalBattle
             // 
@@ -249,8 +277,10 @@
             this.Controls.Add(this.flee);
             this.Controls.Add(this.picBossBattle);
             this.Controls.Add(this.lblEnemyHealthFull);
+            this.Controls.Add(this.lblEnemyArmorFull);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPlayerHealthFull);
+            this.Controls.Add(this.lblPlayerArmorFull);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAttack);
             this.Controls.Add(this.picEnemy);
@@ -275,9 +305,11 @@
         public System.Windows.Forms.PictureBox picEnemy;
         private System.Windows.Forms.Button btnAttack;
         private System.Windows.Forms.Label lblPlayerHealthFull;
+        private System.Windows.Forms.Label lblPlayerArmorFull;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEnemyHealthFull;
+        private System.Windows.Forms.Label lblEnemyArmorFull;
         private System.Windows.Forms.PictureBox picBossBattle;
         private System.Windows.Forms.Timer tmrFinalBattle;
         private System.Windows.Forms.Button flee;
