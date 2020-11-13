@@ -63,12 +63,12 @@
             // picRaidIt
             // 
             this.picRaidIt.BackColor = System.Drawing.Color.Transparent;
-            this.picRaidIt.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.
+            this.picRaidIt.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.NPC_raidIt;
             this.picRaidIt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picRaidIt.Location = new System.Drawing.Point(1117, 665);
+            this.picRaidIt.Location = new System.Drawing.Point(200, 990);
             this.picRaidIt.Margin = new System.Windows.Forms.Padding(4);
             this.picRaidIt.Name = "picRaidIt";
-            this.picRaidIt.Size = new System.Drawing.Size(85, 132);
+            this.picRaidIt.Size = new System.Drawing.Size(72, 130);
             this.picRaidIt.TabIndex = 5;
             this.picRaidIt.TabStop = false;
             // 
