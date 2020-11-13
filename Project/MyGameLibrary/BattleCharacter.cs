@@ -10,6 +10,12 @@ namespace Fall2020_CSC403_Project.code
 {
     public class BattleCharacter : Character
     {
+
+        public int EnemyLevelUp { get; private set; }
+        public int EnemyHealth { get; private set; }
+        public float EnemyStrength { get; set; }
+        public int EnemyArmor { get; private set; }
+
         public int Health { get; set; }
         public int Armor { get; private set; }
         public int MaxHealth { get; set; }
@@ -176,6 +182,7 @@ namespace Fall2020_CSC403_Project.code
 
         public void AlterHealth(int amount)
         {
+            EnemyHealth += amount;
             Health += amount;
         }
         /// <summary>
@@ -183,9 +190,10 @@ namespace Fall2020_CSC403_Project.code
         /// before getting to health
         /// </summary>
         /// <param name="amount"></param>
-        public void AdditionalArmor(int amount)
+        public void AlterArmor(int amount)
         {
             Armor += amount;
+            EnemyArmor += amount;
         }
 
         public void AdditionalStrength(int amount)
@@ -201,6 +209,34 @@ namespace Fall2020_CSC403_Project.code
         public void AlterExp(int amount)
         {
             Level += amount;
+        }
+
+        private void ELevelUp(int Level)
+        {
+            EnemyLevelUp = Level + 2;
+        }
+
+        private void EHealth(int MaxHealth)
+        {
+            EnemyHealth = MaxHealth + 2;
+        }
+
+        /// <summary>
+        /// This is the enemy strength, takes in strength from battle character and increases it
+        /// </summary>
+        /// <param name="strength"></param>
+        private void EStrength(int strength)
+        {
+            EnemyStrength = strength + 2;
+        }
+
+        /// <summary>
+        /// This is the enemy armor, takes in armor from battle character and increases it
+        /// </summary>
+        /// <param name="Armor"></param>
+        private void EArmor(int Armor)
+        {
+            EnemyArmor = Armor + 2;
         }
 
     }
